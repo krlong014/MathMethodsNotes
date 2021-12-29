@@ -1,0 +1,1814 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extbook
+\begin_preamble
+\input{/Users/katharine/Teaching/LyxNotesPreamble.tex}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+theorems-ams-extended
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "palatino" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 1
+\bibtex_command default
+\index_command default
+\float_placement h
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\branch answers
+\selected 1
+\filename_suffix 0
+\color #5555ff
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 0.9in
+\topmargin 0.75in
+\rightmargin 0.9in
+\bottommargin 0.75in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Math methods annotations
+\end_layout
+
+\begin_layout Author
+Katharine Long
+\begin_inset Newline newline
+\end_inset
+
+Department of Mathematics and Statistics
+\begin_inset Newline newline
+\end_inset
+
+Texas Tech University
+\end_layout
+
+\begin_layout Section*
+Preface
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Vectors"
+
+\end_inset
+
+Vectors & Coordinates
+\end_layout
+
+\begin_layout Section
+Arithmetic
+\end_layout
+
+\begin_layout Section
+Dot and cross product
+\end_layout
+
+\begin_layout Subsection
+Applications to kinematics
+\end_layout
+
+\begin_layout Section
+Orthogonal curvilinear coordinates
+\end_layout
+
+\begin_layout Subsection
+Plane polar coordinates
+\end_layout
+
+\begin_layout Subsection
+Cylindrical polar coordinates
+\end_layout
+
+\begin_layout Subsection
+Spherical polar coordinates
+\end_layout
+
+\begin_layout Subsection
+General orthogonal curvilinear coordinates
+\end_layout
+
+\begin_layout Chapter
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Vectors-Abstract"
+
+\end_inset
+
+Vectors: a more abstract look
+\end_layout
+
+\begin_layout Section
+Linear independence, span, and basis
+\end_layout
+
+\begin_layout Subsection
+Functions as vectors
+\end_layout
+
+\begin_layout Subsection
+Inner products and orthogonality
+\end_layout
+
+\begin_layout Subsection
+Orthogonal functions
+\end_layout
+
+\begin_layout Section
+Matrices
+\end_layout
+
+\begin_layout Subsection
+Matrix-vector multiplication
+\end_layout
+
+\begin_layout Subsection
+Inner products
+\end_layout
+
+\begin_layout Subsection
+Systems of equations
+\end_layout
+
+\begin_layout Subsection
+Homogeneous and nonhomogeneous equations; the null space
+\end_layout
+
+\begin_layout Subsection
+The determinant
+\end_layout
+
+\begin_layout Section
+Eigenvalues and eigenvectors
+\end_layout
+
+\begin_layout Standard
+Given a matrix 
+\begin_inset Formula $A$
+\end_inset
+
+, are there vectors 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ such that 
+\begin_inset Formula $A$
+\end_inset
+
+ times 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ comes out proportional to 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+? 
+\end_layout
+
+\begin_layout Subsection
+Diagonalization
+\end_layout
+
+\begin_layout Chapter
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Infinite-series"
+
+\end_inset
+
+Infinite series
+\end_layout
+
+\begin_layout Section
+Taylor and Maclaurin series
+\end_layout
+
+\begin_layout Subsection
+The exponential and friends
+\end_layout
+
+\begin_layout Subsection
+The binomial series
+\end_layout
+
+\begin_layout Section
+Functions defined by series
+\end_layout
+
+\begin_layout Section
+Fourier series
+\end_layout
+
+\begin_layout Section
+Generalized Fourier series
+\end_layout
+
+\begin_layout Chapter
+First order ordinary differential equations
+\end_layout
+
+\begin_layout Section
+Separation of variables
+\end_layout
+
+\begin_layout Section
+First order linear equations (FOLDE)
+\end_layout
+
+\begin_layout Standard
+A first-order linear differential equation (FOLDE) has the form
+\begin_inset Formula 
+\[
+\od{y}{t}+p\left(t\right)y=q\left(t\right).
+\]
+
+\end_inset
+
+A homogeneous FOLDE (you guessed it: HFOLDE) has 
+\begin_inset Formula $q\left(t\right)=0$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\od{y}{t}+p\left(t\right)y=0.
+\]
+
+\end_inset
+
+The HFOLDE is separable; the non-homogeneous FOLDE is generally not.
+ 
+\end_layout
+
+\begin_layout Standard
+In these notes, we'll derive a formula for the solution of any FOLDE using
+ a method called variation of constants.
+ Unfortunately, the formula involves integrations that might be impossible
+ in closed form; however, these integrals can usually be approximated numericall
+y to any desired accuracy.
+ 
+\end_layout
+
+\begin_layout Subsection
+Solving a homogeneous FOLDE
+\end_layout
+
+\begin_layout Standard
+Every homogeneous FOLDE is separable:
+\begin_inset Formula 
+\[
+\od{y}{t}+p\left(t\right)y=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\od{y}{t}=-p\left(t\right)y
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{dy}{y}=-p\left(t\right)\,dt
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\int\frac{dy}{y}=-\int p\left(t\right)\,dt
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\log\left(y\right)-\log\left(C\right)=-\int p\left(t\right)\,dt.
+\]
+
+\end_inset
+
+I've put the constant of integration on the LHS, inside a logarithm, and
+ with a negative sign because I know where we're going.
+ Take antilogarithms, finding the solution
+\begin_inset Formula 
+\[
+y\left(t\right)=C\exp\left[-\int p\left(t\right)\,dt\right].
+\]
+
+\end_inset
+
+It takes a little thought to deal with the indefinite integral on the RHS.
+ Since it's an indefinite integral, we can add any constant to the integral
+\begin_inset Formula 
+\[
+y\left(t\right)=C\exp\left[-\int p\left(t\right)\,dt+C_{2}\right]
+\]
+
+\end_inset
+
+which is
+\begin_inset Formula 
+\[
+y\left(t\right)=Ce^{C_{2}}\exp\left[-\int p\left(t\right)\,dt\right],
+\]
+
+\end_inset
+
+effectively just changing the constant that multiplies the exponential.
+ To avoid this ambiguity, let's write the integral as a definite integral
+ starting at some arbitrary time 
+\begin_inset Formula $t_{0}$
+\end_inset
+
+ and ending at the time 
+\begin_inset Formula $t$
+\end_inset
+
+ at which we want to evaluate the solution.
+ Then,
+\begin_inset Formula 
+\[
+y\left(t\right)=C\exp\left[-\int_{t_{0}}^{t}p\left(s\right)\,ds\right].
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $t$
+\end_inset
+
+ is now a limit of integration, I've changed the integration variable to
+ 
+\begin_inset Formula $s$
+\end_inset
+
+; this is legal since the integration variable in a definite integral is
+ a dummy.
+\end_layout
+
+\begin_layout Subsection
+Incorporating initial conditions
+\end_layout
+
+\begin_layout Standard
+I usually incorporate initial conditions into the limits of integration,
+ letting me bypass the constant of integration.
+ In the previous step I've included 
+\begin_inset Formula $t_{0}$
+\end_inset
+
+ in the limits of integration on the RHS, but haven't put 
+\begin_inset Formula $y_{0}$
+\end_inset
+
+ into limits of integration on the LHS.
+ Here's why: in the method of variation of constants we'll use the integration
+ constant explicitly.
+ Therefore, I'll keep 
+\begin_inset Formula $C$
+\end_inset
+
+ in the calculation for now, and determine it via initial conditions.
+ 
+\end_layout
+
+\begin_layout Standard
+If we have 
+\begin_inset Formula $y\left(t_{0}\right)=y_{0}$
+\end_inset
+
+, we can solve for 
+\begin_inset Formula $C$
+\end_inset
+
+ as follows: plug 
+\begin_inset Formula $t_{0}$
+\end_inset
+
+ into the expression for 
+\begin_inset Formula $y\left(t\right)$
+\end_inset
+
+, and then set equal to 
+\begin_inset Formula $y_{0}$
+\end_inset
+
+: 
+\begin_inset Formula 
+\[
+y_{0}=y\left(t_{0}\right)=C\exp\left[-\int_{t_{0}}^{t_{0}}p\left(s\right)\,ds\right]=Ce^{0}=C.
+\]
+
+\end_inset
+
+Therefore, 
+\begin_inset Formula $C=y_{0}$
+\end_inset
+
+, and the solution is
+\begin_inset Formula 
+\[
+y\left(t\right)=y_{0}\exp\left[-\int_{t_{0}}^{t}p\left(s\right)\,ds\right].
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+An important special case
+\end_layout
+
+\begin_layout Standard
+Consider the very common special case, in which 
+\begin_inset Formula $p\left(t\right)$
+\end_inset
+
+ is a constant: 
+\begin_inset Formula $p\left(t\right)=\alpha$
+\end_inset
+
+.
+ In this case,
+\begin_inset Formula 
+\[
+-\int_{t_{0}}^{t}p\left(s\right)\,ds=-\alpha\left(t-t_{0}\right)
+\]
+
+\end_inset
+
+and the solution is
+\begin_inset Formula 
+\[
+y\left(t\right)=y_{0}e^{-\alpha\left(t-t_{0}\right)}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Variation of constants for the non-homogeneous FOLDE
+\end_layout
+
+\begin_layout Standard
+We return to the non-homogeneous problem
+\begin_inset Formula 
+\[
+\od{y}{t}+p\left(t\right)y=q\left(t\right).
+\]
+
+\end_inset
+
+This equation is generally not separable.
+ We will make a transformation that reduces the problem to a separable (and
+ very easy) differential equation.
+ 
+\end_layout
+
+\begin_layout Standard
+The motivating idea is this: if we regard 
+\begin_inset Formula $q\left(t\right)$
+\end_inset
+
+ as a 
+\begin_inset Quotes eld
+\end_inset
+
+perturbation
+\begin_inset Quotes erd
+\end_inset
+
+ of the homogeneous problem, it seems a reasonable assumption that the solution
+ to the non-homogeneous problem has a form roughly similar to that of the
+ homogeneous problem.
+ So let's assume the exponential part of the solution stays the same as
+ in the homogeneous case, but let the constant 
+\begin_inset Formula $C$
+\end_inset
+
+ vary, so it becomes a function of 
+\begin_inset Formula $t$
+\end_inset
+
+:
+\begin_inset Formula 
+\begin{equation}
+y\left(t\right)=C\left(t\right)\exp\left[-\int_{t_{0}}^{t}p\left(s\right)\,ds\right]\label{eq:assumed-form}
+\end{equation}
+
+\end_inset
+
+where 
+\begin_inset Formula $C\left(t\right)$
+\end_inset
+
+ is somehow to be determined.
+ The question then becomes: how to find 
+\begin_inset Formula $C\left(x\right)$
+\end_inset
+
+? 
+\end_layout
+
+\begin_layout Standard
+Before going on to figure out 
+\begin_inset Formula $C\left(t\right)$
+\end_inset
+
+, let me make a comment on the 
+\begin_inset Quotes eld
+\end_inset
+
+reasonable assumption.
+\begin_inset Quotes erd
+\end_inset
+
+ If you think about it, our assumed form, equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:assumed-form"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, is flexible enough that it can represent functions that differ considerably
+ from the exponential structure of the homogeneous solution (for example,
+ 
+\begin_inset Formula $C\left(t\right)$
+\end_inset
+
+ could contain a factor that exactly cancels out the exponential part),
+ so the the assumption we're making isn't very restrictive at all.
+ In fact, we'll see that for linear equations this assumption is 
+\emph on
+always
+\emph default
+ valid, and the method will 
+\emph on
+always 
+\emph default
+work! (The method is more complicated for nonlinear equations, but let's
+ leave that for a graduate level class).
+ 
+\end_layout
+
+\begin_layout Standard
+We're going to proceed by plugging the assumed solution into the FOLDE,
+ doing a little algebra, and deriving a differential equation for 
+\begin_inset Formula $C\left(t\right)$
+\end_inset
+
+.
+ Happily, the DE for 
+\begin_inset Formula $C\left(t\right)$
+\end_inset
+
+ will turn out to be separable, so in principle we can always solve it (though
+ in practice some integrals might be tricky).
+ Before doing that, a word about initial conditions: if we have the initial
+ condition 
+\begin_inset Formula $y\left(t_{0}\right)=t_{0}$
+\end_inset
+
+, we want to figure out the correct initial condition for 
+\begin_inset Formula $C\left(t\right)$
+\end_inset
+
+.
+ This turns out to be easy: plug 
+\begin_inset Formula $t_{0}$
+\end_inset
+
+ into both sides of equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:assumed-form"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+y\left(t_{0}\right)=C\left(t_{0}\right)\exp\left[-\int_{t_{0}}^{t_{0}}p\left(s\right)\,ds\right]=C\left(t_{0}\right).
+\]
+
+\end_inset
+
+That's as easy as can be: the initial value we need for 
+\begin_inset Formula $C\left(t\right)$
+\end_inset
+
+ is simply the initial value for 
+\begin_inset Formula $y\left(t\right)$
+\end_inset
+
+, that is,
+\begin_inset Formula 
+\[
+C\left(t_{0}\right)=y\left(t_{0}\right)=y_{0}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Deriving the DE for 
+\begin_inset Formula $C\left(t\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We're all set to go: plug the assumed form into the FOLDE:
+\begin_inset Formula 
+\[
+y'+p\left(t\right)y=q\left(t\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\underbrace{C'\left(t\right)\exp\left[-\int_{t_{0}}^{t}p\left(t\right)\,dt\right]-C\left(t\right)p\left(t\right)\exp\left[-\int_{t_{0}}^{t}p\left(s\right)\,ds\right]}_{y'}+\underbrace{p\left(t\right)C\left(t\right)\exp\left[-\int_{t_{0}}^{t}p\left(t\right)\,dt\right]}_{p\left(t\right)y}=q\left(t\right)
+\]
+
+\end_inset
+
+which simplifies to
+\begin_inset Formula 
+\[
+C'\left(t\right)\exp\left[-\int_{t_{0}}^{t}p\left(s\right)\,ds\right]=q\left(t\right)
+\]
+
+\end_inset
+
+from which we can solve for 
+\begin_inset Formula $C'\left(t\right)$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+C'\left(t\right)=\exp\left[\int_{t_{0}}^{t}p\left(s\right)\,ds\right]q\left(t\right).
+\]
+
+\end_inset
+
+Now, this equation is ugly because of the integral inside the exponential,
+ but keep in mind that the ugly RHS is at bottom nothing more than some
+ function of 
+\begin_inset Formula $t$
+\end_inset
+
+ (admittedly it's a rather ugly function of 
+\begin_inset Formula $t$
+\end_inset
+
+).
+ Let's call that function 
+\begin_inset Formula $g\left(t\right)$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+g\left(t\right)=\exp\left[\int_{t_{0}}^{t}p\left(s\right)\,ds\right],
+\]
+
+\end_inset
+
+and write out the equation for 
+\begin_inset Formula $C$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+C'\left(t\right)=g\left(t\right)q\left(t\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Solving for 
+\begin_inset Formula $C\left(t\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The RHS depends only on 
+\begin_inset Formula $t$
+\end_inset
+
+, so this is a particularly nice form of a separable equation: we can solve
+ for 
+\begin_inset Formula $C\left(t\right)$
+\end_inset
+
+ by integrating.
+ Specifically, 
+\begin_inset Formula 
+\[
+\int_{t_{0}}^{t}C'\left(s\right)\,ds=\int_{t_{0}}^{t}g\left(s\right)q\left(s\right)\,ds
+\]
+
+\end_inset
+
+(where again I've used the dummy variable 
+\begin_inset Formula $s$
+\end_inset
+
+ since 
+\begin_inset Formula $t$
+\end_inset
+
+ appears in the limits).
+ The integral on the LHS is easy (just use the FTC), so we have
+\begin_inset Formula 
+\[
+C\left(t\right)-C\left(t_{0}\right)=\int_{t_{0}}^{t}g\left(s\right)q\left(s\right)\,ds
+\]
+
+\end_inset
+
+which we solve for 
+\begin_inset Formula $C\left(t\right)$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+C\left(t\right)=C\left(t_{0}\right)+\int_{t_{0}}^{t}g\left(s\right)q\left(s\right)\,ds.
+\]
+
+\end_inset
+
+The integral on the RHS might be easy, might be hard; it all depends on
+ 
+\begin_inset Formula $p$
+\end_inset
+
+ and 
+\begin_inset Formula $q$
+\end_inset
+
+.
+ Remember also that the first term on the RHS, 
+\begin_inset Formula $C\left(t_{0}\right)$
+\end_inset
+
+, is simply 
+\begin_inset Formula $y_{0}$
+\end_inset
+
+ as per the discussion of initial conditions above.
+ Let's write out the RHS in its full glory:
+\begin_inset Formula 
+\[
+C\left(t\right)=\underbrace{y_{0}}_{\text{since }C\left(t_{0}\right)=y_{0}}+\int_{t_{0}}^{t}\underbrace{\exp\left[\int_{s_{0}}^{s}p\left(r\right)\,dr\right]}_{g\left(s\right)}q\left(s\right)\,ds.
+\]
+
+\end_inset
+
+Yuck: an integral whose integrand contains the exponential of another integral.
+ To keep your sanity and avoid mistakes, pay careful attention to the dummy
+ integration variables: the inner integral is over 
+\begin_inset Formula $r$
+\end_inset
+
+ and has 
+\begin_inset Formula $s$
+\end_inset
+
+ as an upper limit; the outer integral is over 
+\begin_inset Formula $s$
+\end_inset
+
+, with 
+\begin_inset Formula $t$
+\end_inset
+
+ as the upper limit.
+ Since the variables are dummies, you can exchange the symbols 
+\begin_inset Formula $r$
+\end_inset
+
+ and 
+\begin_inset Formula $s$
+\end_inset
+
+, or call them 
+\begin_inset Formula $u$
+\end_inset
+
+ and 
+\begin_inset Formula $v$
+\end_inset
+
+, or whatever.
+ The important thing to remember is that the upper limit of the inner integral
+ must be the integration variable of the outer integral, and the upper limit
+ of the outer integral is your independent variable (here, 
+\begin_inset Formula $t$
+\end_inset
+
+).
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Putting it all together
+\end_layout
+
+\begin_layout Standard
+We now have 
+\begin_inset Formula $C\left(t\right)$
+\end_inset
+
+, so plug it into the assumed form of the solution:
+\begin_inset Formula 
+\[
+y\left(t\right)=C\left(t\right)\exp\left[\int_{t_{0}}^{t}-p\left(s\right)\,ds\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+y\left(t\right)=\underbrace{\left[y_{0}+\int_{t_{0}}^{t}\exp\left[\int_{t_{0}}^{s}p\left(r\right)\,dr\right]q\left(s\right)\,ds\right]}_{C\left(t\right)}\exp\left[\int_{t_{0}}^{t}-p\left(s\right)\,ds\right].
+\]
+
+\end_inset
+
+That's it.
+ Don't memorize it; look it up or derive it from scratch.
+ 
+\end_layout
+
+\begin_layout Section
+FOLDE worked examples
+\end_layout
+
+\begin_layout Subsection
+Homogeneous equations
+\end_layout
+
+\begin_layout BoxedExample
+\begin_inset CommandInset label
+LatexCommand label
+name "ex:Gaussian"
+
+\end_inset
+
+Solve 
+\begin_inset Formula $y'+xy=0$
+\end_inset
+
+ with initial condition 
+\begin_inset Formula $y\left(0\right)=3$
+\end_inset
+
+.
+ This is a FOLDE with 
+\begin_inset Formula $p\left(x\right)=x$
+\end_inset
+
+, so the solution is
+\begin_inset Formula 
+\[
+y\left(x\right)=C\exp\left[-\int_{0}^{x}s\,ds\right]=Ce^{-x^{2}/2}.
+\]
+
+\end_inset
+
+Evaluate at 
+\begin_inset Formula $x=0$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+y\left(0\right)=C
+\]
+
+\end_inset
+
+and apply the initial condition to find 
+\begin_inset Formula $C=3$
+\end_inset
+
+ and therefore
+\begin_inset Formula 
+\[
+y\left(x\right)=3e^{-x^{2}/2}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout BoxedExample
+\begin_inset CommandInset label
+LatexCommand label
+name "ex:tangent"
+
+\end_inset
+
+Solve 
+\begin_inset Formula $y'+\tan\left(x\right)y=0$
+\end_inset
+
+ with initial condition 
+\begin_inset Formula $y\left(0\right)=2$
+\end_inset
+
+.
+ We have 
+\begin_inset Formula $p\left(x\right)=\tan\left(x\right)$
+\end_inset
+
+.
+ We need to do the integral
+\begin_inset Formula 
+\[
+\int_{0}^{x}\tan\left(s\right)\,ds=\int_{0}^{x}\frac{\sin\left(s\right)}{\cos\left(s\right)}\,ds.
+\]
+
+\end_inset
+
+Try the 
+\begin_inset Formula $u$
+\end_inset
+
+-substitution 
+\begin_inset Formula $u=\cos\left(s\right)$
+\end_inset
+
+, 
+\begin_inset Formula $du=-\sin\left(s\right)\,ds$
+\end_inset
+
+, so that
+\begin_inset Formula 
+\[
+\int_{0}^{x}\tan\left(s\right)\,ds=-\int_{\cos\left(0\right)}^{\cos\left(x\right)}\frac{du}{u}=-\log\left(\cos\left(x\right)\right)-\log\left(\cos\left(0\right)\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=-\log\left(\cos\left(x\right)\right).
+\]
+
+\end_inset
+
+The solution to the FOLDE is
+\begin_inset Formula 
+\[
+y\left(x\right)=C\exp\left[-\int_{0}^{x}\tan\left(s\right)\,ds\right]=C\exp\left[\left(-1\right)\left(-1\right)\log\left(\cos\left(x\right)\right)\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=C\cos\left(x\right)
+\]
+
+\end_inset
+
+Apply the IC 
+\begin_inset Formula $y\left(0\right)=2$
+\end_inset
+
+ to find the solution
+\begin_inset Formula 
+\[
+y\left(x\right)=2\cos\left(x\right).
+\]
+
+\end_inset
+
+You might find it surprising that the solution is well-behaved for all 
+\begin_inset Formula $x\in\RR$
+\end_inset
+
+, despite the singularities of 
+\begin_inset Formula $\tan\left(x\right)$
+\end_inset
+
+ at 
+\begin_inset Formula $x=\frac{\pi}{2}$
+\end_inset
+
+, 
+\begin_inset Formula $\frac{3\pi}{2}$
+\end_inset
+
+, and so on.
+ Can you explain?
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Non-homogeneous problems
+\end_layout
+
+\begin_layout BoxedExample
+\begin_inset CommandInset label
+LatexCommand label
+name "ex:nonhomog-gauss"
+
+\end_inset
+
+Solve 
+\begin_inset Formula $y'+xy=x$
+\end_inset
+
+ with initial condition 
+\begin_inset Formula $y\left(0\right)=3$
+\end_inset
+
+.
+ We have 
+\begin_inset Formula $p\left(x\right)=x$
+\end_inset
+
+ and 
+\begin_inset Formula $q\left(x\right)=x$
+\end_inset
+
+.
+ From example 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "ex:Gaussian"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ we know that
+\begin_inset Formula 
+\[
+\exp\left[-\int_{0}^{x}s\,ds\right]=e^{-x^{2}/2}.
+\]
+
+\end_inset
+
+The equation for 
+\begin_inset Formula $C\left(x\right)$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+C'\left(x\right)=q\left(x\right)\exp\left[\int_{0}^{x}p\left(s\right)\,ds\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=xe^{x^{2}/2}
+\]
+
+\end_inset
+
+which we solve by integration,
+\begin_inset Formula 
+\[
+C\left(x\right)=C\left(0\right)+\int_{0}^{x}q\left(t\right)\exp\left[\int_{0}^{t}s\,ds\right]\,dt
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=C\left(0\right)+\int_{0}^{x}te^{t^{2}/2}\,dt.
+\]
+
+\end_inset
+
+Let 
+\begin_inset Formula $u=t^{2}/2$
+\end_inset
+
+, 
+\begin_inset Formula $du=tdt$
+\end_inset
+
+, and find
+\begin_inset Formula 
+\[
+C\left(x\right)=C\left(0\right)+\int_{0}^{x^{2}/2}e^{u}\,du
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=C\left(0\right)+e^{x^{2}/2}-1.
+\]
+
+\end_inset
+
+Recall that, as always, 
+\begin_inset Formula $C\left(x_{0}\right)=y\left(x_{0}\right)$
+\end_inset
+
+, so that
+\begin_inset Formula 
+\[
+C\left(x\right)=2+e^{x^{2}/2}.
+\]
+
+\end_inset
+
+The solution to the original FOLDE is therefore
+\begin_inset Formula 
+\[
+y\left(x\right)=\left(2+e^{x^{2}/2}\right)e^{-x^{2}/2}=1+2e^{-x^{2}/2}.
+\]
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+That wasn't too bad.
+ It gets worse.
+ 
+\end_layout
+
+\begin_layout BoxedExample
+Solve 
+\begin_inset Formula $y'+\tan\left(x\right)y=x^{2}\cos^{2}\left(x\right)$
+\end_inset
+
+ with initial condition 
+\begin_inset Formula $y\left(0\right)=2$
+\end_inset
+
+.
+ We have 
+\begin_inset Formula $p\left(x\right)=\tan\left(x\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $q\left(x\right)=x^{2}$
+\end_inset
+
+.
+ From example 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "ex:tangent"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ we know that
+\begin_inset Formula 
+\[
+\exp\left[-\int_{0}^{x}p\left(s\right)\,ds\right]=\cos\left(x\right).
+\]
+
+\end_inset
+
+The equation for 
+\begin_inset Formula $C$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+C'\left(x\right)=q\left(x\right)\exp\left[\int_{0}^{x}p\left(s\right)\,ds\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=q\left(x\right)\sec\left(x\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=x^{2}\cos\left(x\right).
+\]
+
+\end_inset
+
+Solve by integration:
+\begin_inset Formula 
+\[
+C\left(x\right)=C\left(0\right)+\int_{0}^{x}t^{2}\cos\left(t\right)\,dt
+\]
+
+\end_inset
+
+which is (...firing up Mathematica to avoid two integrations by parts...)
+\begin_inset Formula 
+\[
+C\left(x\right)=\underbrace{2}_{C\left(0\right)=y\left(0\right)}+\underbrace{\left(x^{2}-2\right)\sin\left(x\right)+2x\cos\left(x\right)}_{\text{nasty integral}}.
+\]
+
+\end_inset
+
+Put together the solution:
+\begin_inset Formula 
+\[
+y\left(x\right)=C\left(x\right)\exp\left[-\int_{0}^{x}p\left(s\right)\,ds\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\left[2+\left(x^{2}-2\right)\sin\left(x\right)+2x\cos\left(x\right)\right]\cos\left(x\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Not so much fun, unless you have a computer handy.
+ Let's do one where the integrations can't be done in closed form.
+ Even a simple-looking equation can turn out to have no closed-form solution.
+\end_layout
+
+\begin_layout BoxedExample
+Solve 
+\begin_inset Formula $y'+xy=1$
+\end_inset
+
+ with initial condition 
+\begin_inset Formula $y\left(0\right)=3$
+\end_inset
+
+.
+ This is similar to example 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "ex:nonhomog-gauss"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+, but with a simpler 
+\begin_inset Formula $q\left(x\right)$
+\end_inset
+
+: 
+\begin_inset Formula $q=1$
+\end_inset
+
+ instead of 
+\begin_inset Formula $q=x$
+\end_inset
+
+.
+ I'd 
+\emph on
+think
+\emph default
+ the solution would be simpler, but I'd be wrong.
+ As in example 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "ex:nonhomog-gauss"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ we have
+\begin_inset Formula 
+\[
+\exp\left[-\int_{0}^{x}p\left(s\right)\,ds\right]=e^{-x^{2}/2}.
+\]
+
+\end_inset
+
+The equation for 
+\begin_inset Formula $C$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+C'\left(x\right)=q\left(x\right)\exp\left[\int_{0}^{x}p\left(s\right)\,ds\right]=e^{x^{2}/2},
+\]
+
+\end_inset
+
+which we solve by integration:
+\begin_inset Formula 
+\[
+C\left(x\right)=C\left(0\right)+\int_{0}^{x}e^{t^{2}/2}\,dt.
+\]
+
+\end_inset
+
+The integral on the RHS can't be done in closed form.
+ We can expand the integrand in a Maclaurin series and integrate term-by-term,
+\begin_inset Formula 
+\[
+C\left(x\right)=C\left(0\right)+\sum_{n=0}^{\infty}\int_{0}^{x}\frac{t^{2n}}{\left(n!\right)2^{n}}\,dt
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\underbrace{3}_{C\left(0\right)=y\left(0\right)}+\sum_{n=0}^{\infty}\frac{x^{2n+1}}{\left(2n+1\right)\left(n!\right)2^{n}}.
+\]
+
+\end_inset
+
+Then the solution is
+\begin_inset Formula 
+\[
+y\left(x\right)=\left[3+\sum_{n=0}^{\infty}\frac{x^{2n+1}}{\left(2n+1\right)\left(n!\right)2^{n}}\right]e^{-x^{2}/2}.
+\]
+
+\end_inset
+
+Unfortunately the series converges very slowly for 
+\begin_inset Formula $x>1$
+\end_inset
+
+, and is of little practical use.
+ It's usually simpler to leave the integral unevaluated, writing the solution
+ as
+\begin_inset Formula 
+\[
+y\left(x\right)=\left[3+\int_{0}^{x}e^{t^{2}/2}\right]e^{-x^{2}/2}.
+\]
+
+\end_inset
+
+If you're interested, this solution can be expressed in terms of special
+ functions known as Dawson functions, after the Irish mathematician who
+ investigated their properties.
+ The Dawson functions are related to the error function, which you have
+ seen in class.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+You won't see a Dawson function on a test! This example was chosen to illustrate
+ just how easily these problems can spin out of control; the functions 
+\begin_inset Formula $p\left(x\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $q\left(x\right)$
+\end_inset
+
+ have to be coordinated nicely, or else the integrals become impossible
+ in closed form.
+ It can easily get much worse than a term-by-term integration or a Dawson
+ function.
+ 
+\end_layout
+
+\begin_layout Section
+Discussion
+\end_layout
+
+\begin_layout Itemize
+The most important and most common case will have 
+\begin_inset Formula $p\left(x\right)$
+\end_inset
+
+ equal to a constant, in which case the 
+\begin_inset Quotes eld
+\end_inset
+
+inner
+\begin_inset Quotes erd
+\end_inset
+
+ integrations are easy.
+\end_layout
+
+\begin_layout Itemize
+When 
+\begin_inset Formula $p\left(x\right)$
+\end_inset
+
+ is not constant, these problems can get crazy fast.
+ Happily, such problems aren't that common.
+ I've worked more of these problems when teaching the method than I've ever
+ encountered in practice; if you see a tricky one in the real world, your
+ best bet is numerical solution.
+ 
+\end_layout
+
+\begin_layout Itemize
+The method of variation of constants extends to linear differential equations
+ of any order.
+ I won't discuss this in this course.
+ See your favorite DE textbook (for example, Boyce and DiPrima) for details.
+ 
+\end_layout
+
+\begin_layout Itemize
+An extension of the method of variation of constants can be used to produce
+ approximate solutions to nonlinear equations.
+ This is more advanced, and much more complicated.
+ See, for example, A.
+ E.
+ Roy's 
+\emph on
+Orbital Motion
+\emph default
+ for a presentation of how to use variation of constants to determine approximat
+ely how, say, Jupiter's gravitational field influences the orbital parameters
+ of the Earth.
+ 
+\end_layout
+
+\begin_layout Section
+Sinusoidally forced FOLDECC
+\end_layout
+
+\begin_layout Subsection
+Phase shifts and amplitude
+\end_layout
+
+\begin_layout Chapter
+Second-order ordinary differential equations
+\end_layout
+
+\begin_layout Section
+Second order linear equations (SOLDE)
+\end_layout
+
+\begin_layout Subsection
+Superposition
+\end_layout
+
+\begin_layout Section
+SOLDECC
+\end_layout
+
+\begin_layout Subsection
+Homogeneous equations
+\end_layout
+
+\begin_layout Subsection
+Non-homogeneous equations
+\end_layout
+
+\begin_layout Subsubsection
+Undetermined coefficients
+\end_layout
+
+\begin_layout Section
+Sinusoidally forced SOLDECC
+\end_layout
+
+\begin_layout Subsection
+Phase shifts and amplitude
+\end_layout
+
+\begin_layout Subsection
+Resonance
+\end_layout
+
+\begin_layout Section
+Sturm-Liouville theory and orthogonal functions
+\end_layout
+
+\begin_layout Subsection
+The five easy Sturm-Liouville problems
+\end_layout
+
+\begin_layout Subsection
+The spectral theorem
+\end_layout
+
+\begin_layout Section
+Solving SOLDE with variable coefficients
+\end_layout
+
+\begin_layout Subsection
+Cauchy-Euler equations
+\end_layout
+
+\begin_layout Subsection
+Series solutions
+\end_layout
+
+\begin_layout Subsubsection
+Bessel's equation
+\end_layout
+
+\begin_layout Chapter
+Scalar and vector fields
+\end_layout
+
+\begin_layout Section
+Gradient, divergence, and curl
+\end_layout
+
+\begin_layout Section
+Double-del identities
+\end_layout
+
+\begin_layout Section
+The Helmholtz theorem and potentials
+\end_layout
+
+\begin_layout Section
+Applications: 
+\end_layout
+
+\begin_layout Subsection
+Ideal flow
+\end_layout
+
+\begin_layout Subsection
+Electrostatics and magnetostatics
+\end_layout
+
+\begin_layout Subsection
+Maxwell's equations
+\end_layout
+
+\begin_layout Subsection
+Stokes flow
+\end_layout
+
+\begin_layout Chapter
+Partial differential equations
+\end_layout
+
+\begin_layout Section
+Separation of variables
+\end_layout
+
+\begin_layout Section
+Laplace's equation 
+\end_layout
+
+\begin_layout Subsection
+Laplace in 2D Cartesian coordinates
+\end_layout
+
+\begin_layout Subsection
+Laplace in plane polar coordinates
+\end_layout
+
+\begin_layout Section
+The Helmholtz equation
+\end_layout
+
+\begin_layout Subsection
+Helmholtz in 2D Cartesian coordinates
+\end_layout
+
+\begin_layout Chapter
+Calculus of variations
+\end_layout
+
+\begin_layout Chapter
+Complex analysis
+\end_layout
+
+\begin_layout Section
+Analytic functions
+\end_layout
+
+\begin_layout Section
+Power series
+\end_layout
+
+\begin_layout Section
+Computing real integrals by complex contour integration
+\end_layout
+
+\begin_layout Chapter
+The Fourier transform
+\end_layout
+
+\begin_layout Section
+Identities and simple transform pairs
+\end_layout
+
+\begin_layout Subsection
+Basics
+\end_layout
+
+\begin_layout Subsection
+Generalized functions
+\end_layout
+
+\begin_layout Subsection
+Applications 
+\end_layout
+
+\begin_layout Subsubsection
+1D Boundary value problems
+\end_layout
+
+\begin_layout Subsection
+Fourier convolution
+\end_layout
+
+\begin_layout Section
+Signals and uncertainty
+\end_layout
+
+\begin_layout Subsection
+Tuning a piano
+\end_layout
+
+\begin_layout Subsection
+Fraunhofer diffraction
+\end_layout
+
+\begin_layout Subsection
+The uncertainty principle
+\end_layout
+
+\begin_layout Section
+Initial-boundary value problems on the real line
+\end_layout
+
+\begin_layout Subsection
+The heat equation
+\end_layout
+
+\begin_layout Subsection
+The free-particle Schrödinger equation
+\end_layout
+
+\begin_layout Subsection
+Approximate solution; phase and group velocities
+\end_layout
+
+\end_body
+\end_document

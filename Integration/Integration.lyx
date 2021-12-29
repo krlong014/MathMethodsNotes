@@ -1,0 +1,902 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extbook
+\begin_preamble
+\input{../Main/LyxNotesPreamble.tex}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+theorems-ams-extended
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "palatino" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 1
+\bibtex_command default
+\index_command default
+\float_placement h
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style siam
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\branch answers
+\selected 1
+\filename_suffix 0
+\color #5555ff
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 0.9in
+\topmargin 0.75in
+\rightmargin 0.9in
+\bottommargin 0.75in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Integration"
+
+\end_inset
+
+Integration
+\end_layout
+
+\begin_layout Section
+Line, area, and volume elements
+\end_layout
+
+\begin_layout Section
+Line integrals
+\end_layout
+
+\begin_layout Section
+Area, surface, and volume integrals
+\end_layout
+
+\begin_layout Section
+Some integration tricks
+\end_layout
+
+\begin_layout Subsection
+Poisson's Gaussian integral trick
+\end_layout
+
+\begin_layout Standard
+The integral 
+\begin_inset Formula $G=\int_{-\infty}^{\infty}e^{-x^{2}}\,dx$
+\end_inset
+
+ appears frequently in applications, especially in statistical physics and
+ quantum physics.
+ The indefinite integral can't be evaluated by any standard methods; Liouville
+ proved that the function 
+\begin_inset Formula $e^{-x^{2}}$
+\end_inset
+
+ has no closed-form antiderivative.
+ No clever substitution will get you there.
+ However, the 
+\emph on
+definite
+\emph default
+ integral of 
+\begin_inset Formula $e^{-x^{2}}$
+\end_inset
+
+ over the real line can be computed exactly by means of a diabolically clever
+ trick by Poisson.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+The value of the Gaussian integral was first obtained by Laplace, using
+ an equally clever but less simple trick.
+ I'll teach you Poisson's trick because it's simpler.
+ For more about the history of this integral and a few other tricks for
+ its evaluation, refer to 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://www.york.ac.uk/depts/maths/histstat/normal_history.pdf
+\end_layout
+
+\end_inset
+
+.
+ My knowledge of French is next to nothing, but even I can understand Sturm's
+ comment about the method: 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+...déterminée par M.
+ Poisson à l’aide d’un procédé très-remarquable
+\emph default
+.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We'll follow Poisson by squaring 
+\begin_inset Formula $G$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+G^{2}=\left(\int_{-\infty}^{\infty}e^{-x^{2}}\,dx\right)\left(\int_{-\infty}^{\infty}e^{-x^{2}}\,dx\right).
+\]
+
+\end_inset
+
+In a definite integral the variable is a dummy; in the second copy of the
+ integral we replace 
+\begin_inset Formula $x$
+\end_inset
+
+ by 
+\begin_inset Formula $y$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+G^{2}=\left(\int_{-\infty}^{\infty}e^{-x^{2}}\,dx\right)\left(\int_{-\infty}^{\infty}e^{-y^{2}}\,dy\right).
+\]
+
+\end_inset
+
+But this is equal to the double integral
+\begin_inset Formula 
+\[
+G^{2}=\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}e^{-x^{2}}e^{-y^{2}}\,dx\,dy=\int_{\RR^{2}}e^{-\left(x^{2}+y^{2}\right)}\,dx\,dy.
+\]
+
+\end_inset
+
+Change to polar coordinates,
+\begin_inset Formula 
+\[
+G^{2}=\int_{0}^{2\pi}\int_{0}^{\infty}h_{\rho}h_{\phi}e^{-\rho^{2}}\,d\rho\,d\phi=\int_{0}^{2\pi}\int_{0}^{\infty}\rho e^{-\rho^{2}}\,d\rho\,d\phi=2\pi\int_{0}^{\infty}\rho e^{-\rho^{2}}\,d\rho.
+\]
+
+\end_inset
+
+That last integral can be done with the substitution 
+\begin_inset Formula $u=\rho^{2}$
+\end_inset
+
+, 
+\begin_inset Formula $du=2\rho\,d\rho$
+\end_inset
+
+, after which we have
+\begin_inset Formula 
+\[
+G^{2}=\pi\int_{0}^{1}e^{-u}\,du=\pi.
+\]
+
+\end_inset
+
+Take the square root to find 
+\begin_inset Formula $G=\sqrt{\pi}$
+\end_inset
+
+.
+ We've done it: 
+\begin_inset Formula 
+\[
+\int_{-\infty}^{\infty}e^{-x^{2}}\,dx=\sqrt{\pi}.
+\]
+
+\end_inset
+
+Beautiful! 
+\end_layout
+
+\begin_layout Problem
+\begin_inset CommandInset label
+LatexCommand label
+name "prob:ScaledGaussianIntegral"
+
+\end_inset
+
+Show that 
+\begin_inset Formula $\int_{-\infty}^{\infty}e^{-\alpha x^{2}}\,dx=\sqrt{\frac{\pi}{\alpha}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Explain why 
+\begin_inset Formula $\int_{-\infty}^{\infty}x^{n}e^{-x^{2}}\,dx$
+\end_inset
+
+ is zero for all odd 
+\begin_inset Formula $n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Use completion of the square to evaluate 
+\begin_inset Formula $\int_{-\infty}^{\infty}e^{\alpha x}e^{-\beta x^{2}}\,dx.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+In a system in thermodynamic equilibrium at temperature 
+\begin_inset Formula $T$
+\end_inset
+
+, the probability of finding a particle with energy in the interval 
+\begin_inset Formula $\left(E,E+dE\right)$
+\end_inset
+
+ is 
+\begin_inset Formula $p\left(E\right)dE=Ce^{-\beta E}g\left(E\right)\,dE$
+\end_inset
+
+, where 
+\begin_inset Formula $\beta=1/k_{B}T$
+\end_inset
+
+, 
+\begin_inset Formula $g\left(E\right)dE$
+\end_inset
+
+ is proportional the number of possible states having energy in the range
+ 
+\begin_inset Formula $\left(E,E+dE\right)$
+\end_inset
+
+, and 
+\begin_inset Formula $C$
+\end_inset
+
+ is a normalization constant.
+ The normalization constant will be fixed by the condition 
+\begin_inset Formula 
+\[
+\int p\left(E\right)\,dE=1.
+\]
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Multidimensional Gaussian integrals
+\end_layout
+
+\begin_layout Standard
+The Gaussian function of 
+\begin_inset Formula $\left\Vert \mathbf{r}\right\Vert $
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+f\left(\mathbf{r}\right)=e^{-\alpha\left\Vert \mathbf{r}\right\Vert ^{2}}=e^{-\alpha\mathbf{r}\cdot\mathbf{r}},
+\]
+
+\end_inset
+
+can be evaluated in any number of dimensions.
+ Let's work in 
+\begin_inset Formula $\RR^{n}$
+\end_inset
+
+, in which case
+\begin_inset Formula 
+\[
+f\left(\mathbf{r}\right)=e^{-\alpha\left(x_{1}^{2}+x_{2}^{2}+\cdots+x_{n}^{2}\right)}=e^{-\alpha x_{1}^{2}}e^{-\alpha x_{2}^{2}}\cdots e^{-\alpha x_{n}^{2}}.
+\]
+
+\end_inset
+
+Integrate over all space:
+\begin_inset Formula 
+\[
+\int_{\RR^{n}}e^{-\alpha\mathbf{r}\cdot\mathbf{r}}d^{n}\mathbf{r}=\left(\int_{-\infty}^{\infty}e^{-\alpha x_{1}^{2}}\,dx_{1}\right)\left(\int_{-\infty}^{\infty}e^{-\alpha x_{2}^{2}}\,dx_{2}\right)\cdots\left(\int_{-\infty}^{\infty}e^{-\alpha x_{n}^{2}}\,dx_{n}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\left(\sqrt{\frac{\pi}{\alpha}}\right)^{n}.
+\]
+
+\end_inset
+
+Let's generalize slightly, by letting the surfaces of constant 
+\begin_inset Formula $f$
+\end_inset
+
+ be hyperellipsoids rather than hyperspheres:
+\begin_inset Formula 
+\[
+f\left(\mathbf{r}\right)=e^{-\alpha_{1}x_{1}^{2}}e^{-\alpha_{2}x_{2}^{2}}\cdots e^{-\alpha_{n}x_{2}^{2}}.
+\]
+
+\end_inset
+
+Use the reasoning above to show that 
+\begin_inset Formula 
+\[
+\int_{\RR^{n}}f\left(\mathbf{r}\right)d^{n}\mathbf{r}=\frac{\pi^{n/2}}{\sqrt{\alpha_{1}\alpha_{2}\cdots\alpha_{n}}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Feynman's trick
+\end_layout
+
+\begin_layout Standard
+Richard Feynman didn't invent this trick; it was known long before Feynman
+ was born, and he learned it from a textbook.
+ However, Feynman used it frequently and made it widely known among physicists,
+ so it's often called Feynman's trick.
+ 
+\end_layout
+
+\begin_layout Standard
+The starting point is 
+\begin_inset CommandInset href
+LatexCommand href
+name "Leibniz's formula"
+target "https://dlmf.nist.gov/1.5.iv"
+literal "false"
+
+\end_inset
+
+ for differentiating an integral with respect to a parameter: If we have
+ a definite integral 
+\begin_inset Formula $E$
+\end_inset
+
+ that depends on a parameter 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+E\left(\alpha\right)=\int_{a\left(\alpha\right)}^{b\left(\alpha\right)}f\left(\alpha,x\right)\,dx,
+\]
+
+\end_inset
+
+then its derivative with respect to 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+\od{E}{\alpha}=\int_{a\left(\alpha\right)}^{b\left(\alpha\right)}\pd{f}{\alpha}\,dx+f\left(\alpha,b\left(\alpha\right)\right)b'\left(\alpha\right)-f\left(\alpha,a\left(\alpha\right)\right)a'\left(\alpha\right).
+\]
+
+\end_inset
+
+This is a function of 
+\begin_inset Formula $\alpha$
+\end_inset
+
+; we'll call it 
+\begin_inset Formula $H\left(\alpha\right)$
+\end_inset
+
+.
+ In the most common applications, the limits 
+\begin_inset Formula $a\left(\alpha\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $b\left(\alpha\right)$
+\end_inset
+
+ will be constants; hereafter we'll assume that's true; then 
+\begin_inset Formula $a'\left(\alpha\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $b'\left(\alpha\right)$
+\end_inset
+
+ are zero.
+ In that case, Leibniz's formula simplifies to
+\begin_inset Formula 
+\[
+H\left(\alpha\right)=E'\left(\alpha\right)=\int_{a}^{b}\pd{f}{\alpha}\,dx.
+\]
+
+\end_inset
+
+We now have two integrals:
+\begin_inset Formula 
+\[
+H\left(\alpha\right)=\int_{a}^{b}\pd{f}{\alpha}\left(\alpha,x\right)\,dx
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+E\left(\alpha\right)=\int_{a}^{b}f\left(\alpha,x\right)\,dx,
+\]
+
+\end_inset
+
+related by 
+\begin_inset Formula $H\left(\alpha\right)=E'\left(\alpha\right)$
+\end_inset
+
+.
+ The idea behind Feynman's trick is this: suppose 
+\begin_inset Formula $H$
+\end_inset
+
+ is hard to do, but 
+\begin_inset Formula $E$
+\end_inset
+
+ is easy.
+ Then compute 
+\begin_inset Formula $E\left(\alpha\right)$
+\end_inset
+
+, and obtain 
+\begin_inset Formula $H\left(\alpha\right)=E'\left(\alpha\right)$
+\end_inset
+
+ by differentiation.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Simple examples
+\end_layout
+
+\begin_layout Standard
+Let's see it in action; in this first example we'll start with an easy integral
+ and find a harder integral.
+ The easy integral will be
+\begin_inset Formula 
+\[
+E\left(\alpha\right)=\int_{0}^{\infty}e^{-\alpha x}\,dx=\frac{1}{\alpha}.
+\]
+
+\end_inset
+
+Differentiate the integral,
+\begin_inset Formula 
+\[
+E'\left(\alpha\right)=\int_{0}^{\infty}\pd{}{\alpha}\left(e^{-\alpha x}\right)\,dx=-\int_{0}^{\infty}xe^{-\alpha x}\,dx
+\]
+
+\end_inset
+
+and the result,
+\begin_inset Formula 
+\[
+E'\left(\alpha\right)=-\frac{1}{\alpha^{2}}.
+\]
+
+\end_inset
+
+Setting both forms of 
+\begin_inset Formula $E'\left(\alpha\right)$
+\end_inset
+
+ equal to one another, we've computed the harder integral
+\begin_inset Formula 
+\[
+\int_{0}^{\infty}xe^{-\alpha x}\,dx=\frac{1}{\alpha^{2}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In practice, though, we'll usually be given a hard integral 
+\begin_inset Formula $H\left(\alpha\right)$
+\end_inset
+
+ and have to spot how to work backwards to an easier integral 
+\begin_inset Formula $E\left(\alpha\right)$
+\end_inset
+
+.
+ Suppose we need to compute
+\begin_inset Formula 
+\[
+H\left(\alpha\right)=\int_{-\infty}^{\infty}x^{2}e^{-\alpha x^{2}}\,dx.
+\]
+
+\end_inset
+
+This can be computed by two rounds of integration by parts; it's easier
+ to use Feynman's trick.
+ Recognize the integrand as the derivative of a simpler function,
+\begin_inset Formula 
+\[
+x^{2}e^{-\alpha x^{2}}=\pd{}{\alpha}\left(-e^{-\alpha x^{2}}\right).
+\]
+
+\end_inset
+
+This leads us to the easier integral
+\begin_inset Formula 
+\[
+E\left(\alpha\right)=-\int_{-\infty}^{\infty}e^{-\alpha x^{2}}\,dx=-\sqrt{\frac{\pi}{\alpha}}
+\]
+
+\end_inset
+
+(computed in problem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prob:ScaledGaussianIntegral"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+).
+ Our hard integral is obtained by differentiation:
+\begin_inset Formula 
+\[
+H\left(\alpha\right)=E'\left(\alpha\right)=\frac{\sqrt{\pi}}{2\alpha^{3/2}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Repeated differentiation
+\end_layout
+
+\begin_layout Standard
+Sometimes you'll need to differentiate 
+\begin_inset Formula $E\left(\alpha\right)$
+\end_inset
+
+ more than once to recover the hard integral.
+ Consider the hard integral
+\begin_inset Formula 
+\[
+H\left(\alpha\right)=\int_{0}^{\infty}x^{4}e^{-\alpha x}\,dx,
+\]
+
+\end_inset
+
+which can be recognized as the 
+\emph on
+fourth
+\emph default
+ derivative of 
+\begin_inset Formula 
+\[
+E\left(\alpha\right)=\int_{0}^{\infty}e^{-\alpha x}\,dx=\frac{1}{\alpha}.
+\]
+
+\end_inset
+
+Therefore,
+\begin_inset Formula 
+\[
+H\left(\alpha\right)=E^{\left(4\right)}\left(\alpha\right)=\frac{4!}{\alpha^{5}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+\begin_inset CommandInset label
+LatexCommand label
+name "prob:factorial-integral"
+
+\end_inset
+
+Use mathematical induction to prove the general formula 
+\begin_inset Formula $\int_{0}^{\infty}x^{n}e^{-\alpha x}\,dx=\frac{n!}{\alpha^{n+1}}$
+\end_inset
+
+ for 
+\begin_inset Formula $n\in\NN_{0}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Use repeated differentiation to evaluate 
+\begin_inset Formula $\int_{-\infty}^{\infty}x^{4}e^{-\alpha x^{2}}\,dx$
+\end_inset
+
+ and 
+\begin_inset Formula $\int_{-\infty}^{\infty}x^{6}e^{-\alpha x^{2}}\,dx$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Use repeated differentiation to evaluate the integral 
+\begin_inset Formula $H\left(n\right)=\int_{-\pi}^{\pi}x^{2}\cos\left(nx\right)\,dx$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Inserting parameters
+\end_layout
+
+\begin_layout Standard
+Sometimes there's no obvious parameter in an integral.
+ Consider the hard integral
+\begin_inset Formula 
+\[
+H=\int_{-\infty}^{\infty}\frac{x^{2}\,dx}{\left(1+x^{2}\right)^{2}},
+\]
+
+\end_inset
+
+and compare to the easy integral
+\begin_inset Formula 
+\[
+E=\int_{-\infty}^{\infty}\frac{dx}{1+x^{2}}=\pi.
+\]
+
+\end_inset
+
+To produce the 
+\begin_inset Formula $x^{2}$
+\end_inset
+
+ in the numerator, insert a parameter next to the 
+\begin_inset Formula $x^{2}$
+\end_inset
+
+ in the denominator:
+\begin_inset Formula 
+\[
+H\left(\alpha\right)=\int_{-\infty}^{\infty}\frac{x^{2}dx}{\left(1+\alpha x^{2}\right)^{2}}
+\]
+
+\end_inset
+
+and
+\begin_inset Formula 
+\[
+E\left(\alpha\right)=\int_{-\infty}^{\infty}\frac{dx}{1+\alpha x^{2}}=\frac{\pi}{\sqrt{\alpha}}.
+\]
+
+\end_inset
+
+Notice that 
+\begin_inset Formula $H\left(\alpha\right)=-E'\left(\alpha\right)$
+\end_inset
+
+, so that the hard integral is
+\begin_inset Formula 
+\[
+H\left(\alpha\right)=\frac{\pi}{2\alpha^{3/2}}.
+\]
+
+\end_inset
+
+If you want the original integral 
+\begin_inset Formula $H$
+\end_inset
+
+, just evaluate 
+\begin_inset Formula $H\left(\alpha\right)$
+\end_inset
+
+ at 
+\begin_inset Formula $\alpha=1$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+H=\frac{\pi}{2}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Suppose you're given an 
+\begin_inset Quotes eld
+\end_inset
+
+easy
+\begin_inset Quotes erd
+\end_inset
+
+ integral 
+\begin_inset Formula $E=\int_{-\infty}^{\infty}\frac{dx}{\left(1+x^{2}\right)^{4}}=\frac{5\pi}{16}$
+\end_inset
+
+.
+ (Here the word 
+\begin_inset Quotes eld
+\end_inset
+
+easy
+\begin_inset Quotes erd
+\end_inset
+
+ is used in a relative sense).
+ Use Feynman's trick to derive
+\begin_inset Formula 
+\[
+H=\int_{-\infty}^{\infty}\frac{x^{4}\,dx}{\left(1+x^{2}\right)^{6}}=\frac{3\pi}{256}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+The Dirac delta function
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\end_body
+\end_document

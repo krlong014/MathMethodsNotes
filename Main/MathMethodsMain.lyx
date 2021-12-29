@@ -1,0 +1,920 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extbook
+\begin_preamble
+\input{../Main/LyxNotesPreamble.tex}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+theorems-ams-extended
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "palatino" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 1
+\bibtex_command default
+\index_command default
+\float_placement h
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style siam
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\branch answers
+\selected 1
+\filename_suffix 0
+\color #5555ff
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 0.9in
+\topmargin 0.75in
+\rightmargin 0.9in
+\bottommargin 0.75in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Math methods annotations
+\end_layout
+
+\begin_layout Author
+Katharine Long
+\begin_inset Newline newline
+\end_inset
+
+Department of Mathematics and Statistics
+\begin_inset Newline newline
+\end_inset
+
+Texas Tech University
+\end_layout
+
+\begin_layout Section*
+Preface
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Resources
+\end_layout
+
+\begin_layout Section
+Textbook
+\end_layout
+
+\begin_layout Itemize
+Hassani, 
+\emph on
+Mathematical Methods For Students of Physics and Related Fields
+\emph default
+, 2009, Springer
+\end_layout
+
+\begin_layout Section
+Books to have handy for review
+\end_layout
+
+\begin_layout Itemize
+Your favorite calculus book.
+ There are a gazillion calculus books out there, so pick one you like.
+ Since I can't possibly provide references to every calculus book, I'll
+ give you section references to two that are easily obtained by TTU students:
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+If you took calculus at TTU, you probably have: (SST) Smith, Strauss, and
+ Toda, 
+\emph on
+Calculus
+\emph default
+, 2014, Kendall Hunt.
+ 
+\end_layout
+
+\begin_layout Itemize
+A series of top-quality calculus books freely distributed online is: (OSTXC)
+ OpenStax, 
+\emph on
+Calculus
+\emph default
+.
+ You can download PDFs or apps.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Volume 1: 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://openstax.org/details/books/calculus-volume-1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Volume 2: 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://openstax.org/details/books/calculus-volume-2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Volume 3: 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://openstax.org/details/books/calculus-volume-3
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Itemize
+Your favorite intro physics book.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+If you took intro physics at TTU, you probably have: (SJP) Serway and Jewett,
+ 
+\emph on
+Physics for Scientists and Engineers
+\emph default
+, 2008, Thomson/Brooks/Cole.
+ 
+\end_layout
+
+\begin_layout Itemize
+A series of intro physics books freely distributed online is: (OSTXP) OpenStax,
+ 
+\emph on
+University Physics
+\emph default
+.
+ You can download PDFs or apps.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Volume 1: 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://openstax.org/details/books/university-physics-volume-1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Volume 2: 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://openstax.org/details/books/university-physics-volume-2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Volume 3: 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://openstax.org/details/books/university-physics-volume-3
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+A classic available freely online is
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+(FLP) Feynman, Leighton, and Sands, 
+\emph on
+The Feynman Lectures on Physics
+\emph default
+, online edition: 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://www.feynmanlectures.caltech.edu/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Math reference handbook
+\end_layout
+
+\begin_layout Itemize
+(DLMF) Olver (ed),
+\emph on
+ NIST digital library of mathematical functions
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Available online at 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://dlmf.nist.gov/
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+This is an online edition of the hardcopy book 
+\emph on
+NIST Handbook of Mathematical Functions, 
+\emph default
+2010, Cambridge.
+ 
+\end_layout
+
+\begin_layout Itemize
+The original 
+\emph on
+Handbook of Mathematical Functions, 
+\emph default
+edited by Abramowitz and Stegun, was published in 1964.
+ It is now freely available in PDF form.
+ There's an inexpensive Dover version if you like hardcopy.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Online presentations
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+3Blue1Brown
+\series default
+ video series by Grant Sanderson.
+ These are wonderful.
+ Some series of particular relvance to this course are:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Calculus: 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://www.3blue1brown.com/topics/calculus
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Linear algebra: 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://www.3blue1brown.com/topics/linear-algebra
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Differential equations: 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://www.3blue1brown.com/topics/differential-equations
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Fourier analysis, vector calculus: in 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://www.3blue1brown.com/topics/analysis
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+MIT OpenCourseWare
+\series default
+ has courses on many subjects.
+ Relevant to this course are: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Differential equations: 
+\begin_inset CommandInset href
+LatexCommand href
+name "MIT 18.03"
+target "https://ocw.mit.edu/courses/mathematics/18-03-differential-equations-spring-2010/index.htm"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Linear algebra: 
+\begin_inset CommandInset href
+LatexCommand href
+name "MIT 18.06"
+target "https://ocw.mit.edu/courses/mathematics/18-06sc-linear-algebra-fall-2011/index.htm"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Multivariable calculus 
+\begin_inset CommandInset href
+LatexCommand href
+name "MIT 18.02"
+target "https://ocw.mit.edu/courses/mathematics/18-02sc-multivariable-calculus-fall-2010/"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%% First look at vectors
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "/Users/katharine/Teaching/Notes/MathMethods/Vectors/Vectors.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%% Integration
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "../Integration/Integration.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+First order ordinary differential equations
+\end_layout
+
+\begin_layout Section
+Separation of variables
+\end_layout
+
+\begin_layout Section
+First order linear equations (FOLDE)
+\end_layout
+
+\begin_layout Section
+FOLDE worked examples
+\end_layout
+
+\begin_layout Section
+Sinusoidally forced FOLDECC
+\end_layout
+
+\begin_layout Chapter
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Second-order-ordinary-differenti-1"
+
+\end_inset
+
+Second-order ordinary differential equations (first look)
+\end_layout
+
+\begin_layout Section
+Second order linear equations (SOLDE)
+\end_layout
+
+\begin_layout Subsection
+Superposition
+\end_layout
+
+\begin_layout Section
+SOLDECC
+\end_layout
+
+\begin_layout Section
+Sinusoidally forced SOLDECC
+\end_layout
+
+\begin_layout Chapter
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Vectors-Abstract"
+
+\end_inset
+
+Vectors: a more abstract look
+\end_layout
+
+\begin_layout Section
+Linear independence, span, and basis
+\end_layout
+
+\begin_layout Subsection
+Functions as vectors
+\end_layout
+
+\begin_layout Subsection
+Inner products and orthogonality
+\end_layout
+
+\begin_layout Subsection
+Orthogonal functions
+\end_layout
+
+\begin_layout Section
+Matrices
+\end_layout
+
+\begin_layout Subsection
+Matrix-vector multiplication
+\end_layout
+
+\begin_layout Subsection
+Inner products
+\end_layout
+
+\begin_layout Subsection
+Systems of equations
+\end_layout
+
+\begin_layout Subsection
+Homogeneous and nonhomogeneous equations; the null space
+\end_layout
+
+\begin_layout Subsection
+The determinant
+\end_layout
+
+\begin_layout Section
+Eigenvalues and eigenvectors
+\end_layout
+
+\begin_layout Standard
+Given a matrix 
+\begin_inset Formula $A$
+\end_inset
+
+, are there vectors 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ such that 
+\begin_inset Formula $A$
+\end_inset
+
+ times 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+ comes out proportional to 
+\begin_inset Formula $\mathbf{v}$
+\end_inset
+
+? 
+\end_layout
+
+\begin_layout Subsection
+Diagonalization
+\end_layout
+
+\begin_layout Chapter
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Infinite-series"
+
+\end_inset
+
+Infinite series
+\end_layout
+
+\begin_layout Section
+Taylor and Maclaurin series
+\end_layout
+
+\begin_layout Subsection
+The exponential and friends
+\end_layout
+
+\begin_layout Subsection
+The binomial series
+\end_layout
+
+\begin_layout Section
+Functions defined by series
+\end_layout
+
+\begin_layout Section
+Fourier series
+\end_layout
+
+\begin_layout Section
+Generalized Fourier series
+\end_layout
+
+\begin_layout Chapter
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Second-order-ordinary-differenti"
+
+\end_inset
+
+Second-order ordinary differential equations (second look)
+\end_layout
+
+\begin_layout Section
+Sturm-Liouville theory and orthogonal functions
+\end_layout
+
+\begin_layout Subsection
+The five easy Sturm-Liouville problems
+\end_layout
+
+\begin_layout Subsection
+The spectral theorem
+\end_layout
+
+\begin_layout Section
+SOLDE with variable coefficients
+\end_layout
+
+\begin_layout Subsection
+Cauchy-Euler equations
+\end_layout
+
+\begin_layout Subsection
+Series solutions
+\end_layout
+
+\begin_layout Subsection
+Bessel's equation
+\end_layout
+
+\begin_layout Chapter
+Scalar and vector fields
+\end_layout
+
+\begin_layout Section
+Gradient, divergence, and curl
+\end_layout
+
+\begin_layout Section
+Double-del identities
+\end_layout
+
+\begin_layout Section
+The Helmholtz theorem and potentials
+\end_layout
+
+\begin_layout Section
+Applications: 
+\end_layout
+
+\begin_layout Subsection
+Ideal flow
+\end_layout
+
+\begin_layout Subsection
+Electrostatics and magnetostatics
+\end_layout
+
+\begin_layout Subsection
+Maxwell's equations
+\end_layout
+
+\begin_layout Subsection
+Stokes flow
+\end_layout
+
+\begin_layout Chapter
+Partial differential equations
+\end_layout
+
+\begin_layout Section
+Separation of variables
+\end_layout
+
+\begin_layout Section
+Laplace's equation 
+\end_layout
+
+\begin_layout Subsection
+Laplace in 2D Cartesian coordinates
+\end_layout
+
+\begin_layout Subsection
+Laplace in plane polar coordinates
+\end_layout
+
+\begin_layout Section
+The Helmholtz equation
+\end_layout
+
+\begin_layout Subsection
+Helmholtz in 2D Cartesian coordinates
+\end_layout
+
+\begin_layout Chapter
+Calculus of variations
+\end_layout
+
+\begin_layout Chapter
+Complex analysis
+\end_layout
+
+\begin_layout Section
+Analytic functions
+\end_layout
+
+\begin_layout Section
+Power series
+\end_layout
+
+\begin_layout Section
+Computing real integrals by complex contour integration
+\end_layout
+
+\begin_layout Chapter
+The Fourier transform
+\end_layout
+
+\begin_layout Section
+Identities and simple transform pairs
+\end_layout
+
+\begin_layout Subsection
+Basics
+\end_layout
+
+\begin_layout Subsection
+Generalized functions
+\end_layout
+
+\begin_layout Subsection
+Applications 
+\end_layout
+
+\begin_layout Subsubsection
+1D Boundary value problems
+\end_layout
+
+\begin_layout Subsection
+Fourier convolution
+\end_layout
+
+\begin_layout Section
+Signals and uncertainty
+\end_layout
+
+\begin_layout Subsection
+Tuning a piano
+\end_layout
+
+\begin_layout Subsection
+Fraunhofer diffraction
+\end_layout
+
+\begin_layout Subsection
+The uncertainty principle
+\end_layout
+
+\begin_layout Section
+Initial-boundary value problems on the real line
+\end_layout
+
+\begin_layout Subsection
+The heat equation
+\end_layout
+
+\begin_layout Subsection
+The free-particle Schrödinger equation
+\end_layout
+
+\begin_layout Subsection
+Approximate solution; phase and group velocities
+\end_layout
+
+\end_body
+\end_document

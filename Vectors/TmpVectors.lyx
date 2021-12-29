@@ -1,0 +1,706 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extarticle
+\begin_preamble
+\input{/Users/katharine/Teaching/LyxNotesPreamble}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+theorems-ams-extended
+enumitem
+algorithm2e
+multicol
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "palatino" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\branch answers
+\selected 0
+\filename_suffix 0
+\color #affffc
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 0.9in
+\topmargin 0.75in
+\rightmargin 0.9in
+\bottommargin 0.75in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+\noindent
+Dot and Cross Products: Algebra, Geometry and Applications
+\end_layout
+
+\begin_layout Section
+Vectors
+\end_layout
+
+\begin_layout Standard
+We have several ways of describing a vector 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Magnitude 
+\begin_inset Formula $\left\Vert \mathbf{A}\right\Vert $
+\end_inset
+
+ and direction given by the angle 
+\begin_inset Formula $\theta$
+\end_inset
+
+ measured CCW from the 
+\begin_inset Formula $x$
+\end_inset
+
+ axis
+\end_layout
+
+\begin_layout Itemize
+Ordered pair of Cartesian coordinates 
+\begin_inset Formula $\left(A_{x},A_{y}\right)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+Written out in unit vectors: 
+\begin_inset Formula $\mathbf{A}=A_{x}\ihat+A_{y}\jhat$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Column vector of components
+\begin_inset Formula 
+\[
+\mathbf{A}=\left[\begin{array}{c}
+A_{x}\\
+A_{y}
+\end{array}\right].
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+A word about notation
+\end_layout
+
+\begin_layout Itemize
+In your homework and exam solutions, you 
+\series bold
+\emph on
+MUST
+\series default
+\emph default
+ use a notation to distinguish vectors.
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Correct: 
+\begin_inset Formula $\mathbf{r}\left(t\right)=x\left(t\right)\ihat+y\left(t\right)\jhat$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Incorrect:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\mathbf{r}\left(t\right)=x\left(t\right)i+y\left(t\right)j$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $r\left(t\right)=x\left(t\right)+y\left(t\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and so on.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Exception: you can write the zero vector 
+\begin_inset Formula $\mathbf{0}$
+\end_inset
+
+ as simply 
+\begin_inset Formula $0$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+In print, vectors are boldfaced: 
+\begin_inset Formula $\mathbf{A}$
+\end_inset
+
+, 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+.
+ The components of a vector are 
+\series bold
+\emph on
+not
+\series default
+\emph default
+ scalars! 
+\end_layout
+
+\begin_layout Itemize
+On the board or in hand calculations, I usually write vectors with a 
+\begin_inset Quotes eld
+\end_inset
+
+twiddle
+\begin_inset Quotes erd
+\end_inset
+
+ beneath the letter.
+ You're probably used to writing arrows over vectors: 
+\begin_inset Formula $\overrightarrow{A}$
+\end_inset
+
+, 
+\begin_inset Formula $\overrightarrow{b}$
+\end_inset
+
+, and so on.
+ Either one (or other reasonable alternative) is fine, as long as you use
+ 
+\emph on
+some
+\emph default
+ method for distinguishing vectors.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+I've come to prefer the under-twiddle to the over-arrow because in real
+ problems my vectors often get 
+\begin_inset Quotes eld
+\end_inset
+
+decorated
+\begin_inset Quotes erd
+\end_inset
+
+ with symbols such as an over-dot for time derivative or an over-twiddle
+ for Fourier transforms, making the top of the poor vectors get hopelessly
+ cluttered.
+ 
+\end_layout
+
+\begin_layout Itemize
+In the second semester, we'll use over-twiddle 
+\begin_inset Formula $\tilde{f}$
+\end_inset
+
+ for the Fourier transform of a function 
+\begin_inset Formula $f$
+\end_inset
+
+.
+ So it's best to avoid using an over-twiddle for your vectors.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Typed or by hand, unit vectors get hats: hatted and bolded (
+\begin_inset Formula $\ihat$
+\end_inset
+
+ and 
+\begin_inset Formula $\jhat$
+\end_inset
+
+) when typed, or hatted (
+\begin_inset Formula $\hat{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $\hat{j}$
+\end_inset
+
+) by hand.
+ 
+\end_layout
+
+\begin_layout Itemize
+There are several conventions for the standard Cartesian unit vectors:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\ihat$
+\end_inset
+
+, 
+\begin_inset Formula $\jhat$
+\end_inset
+
+, 
+\begin_inset Formula $\khat$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\xhat$
+\end_inset
+
+, 
+\begin_inset Formula $\yhat$
+\end_inset
+
+,
+\begin_inset Formula $\zhat$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\ehat_{x}$
+\end_inset
+
+, 
+\begin_inset Formula $\ehat_{y}$
+\end_inset
+
+, 
+\begin_inset Formula $\ehat_{z}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Following Hassani, I use 
+\begin_inset Formula $\ihat,\jhat,\khat$
+\end_inset
+
+ in this course.
+ You can use any of the standard conventions.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Scaling vectors with scalars
+\end_layout
+
+\begin_layout Subsection
+Adding vectors
+\end_layout
+
+\begin_layout Subsection
+Scaling and adding: linear combinations
+\end_layout
+
+\begin_layout Section
+The dot product
+\end_layout
+
+\begin_layout Standard
+You've seen the 2D dot product presented in two ways:
+\end_layout
+
+\begin_layout Itemize
+Geometric: 
+\begin_inset Formula $\mathbf{a}\cdot\mathbf{b}=\left\Vert \mathbf{a}\right\Vert \left\Vert \mathbf{b}\right\Vert \cos\left(\theta_{ab}\right)$
+\end_inset
+
+ where 
+\begin_inset Formula $\left\Vert \mathbf{a}\right\Vert $
+\end_inset
+
+ and 
+\begin_inset Formula $\left\Vert \mathbf{b}\right\Vert $
+\end_inset
+
+ are the lengths of 
+\begin_inset Formula $\mathbf{a}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+, and 
+\begin_inset Formula $\theta_{ab}$
+\end_inset
+
+ is the angle between the two vectors.
+ 
+\end_layout
+
+\begin_layout Itemize
+Algebraic: 
+\begin_inset Formula $\mathbf{a}\cdot\mathbf{b}=a_{x}b_{x}+a_{y}b_{y}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+These two formulas are equivalent; they are connected via the angle addition
+ formula for the cosine:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbf{a}\cdot\mathbf{b}=\left\Vert \mathbf{a}\right\Vert \left\Vert \mathbf{b}\right\Vert \cos\theta_{ab}=\left\Vert \mathbf{a}\right\Vert \left\Vert \mathbf{b}\right\Vert \cos\left(\theta_{a}-\theta_{b}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\left\Vert \mathbf{a}\right\Vert \left\Vert \mathbf{b}\right\Vert \left(\cos\theta_{a}\cos\theta_{b}+\sin\theta_{a}\sin\theta_{b}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=a_{x}b_{x}+a_{y}b_{y}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Generalizations
+\end_layout
+
+\begin_layout Itemize
+The dot product generalizes to spaces with any number of dimensions: if
+ 
+\begin_inset Formula $\mathbf{f}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{g}$
+\end_inset
+
+ are two vectors in 
+\begin_inset Formula $\RR^{n}$
+\end_inset
+
+, then
+\begin_inset Formula 
+\[
+\mathbf{f}\cdot\mathbf{g}=\sum_{i=1}^{n}f_{i}g_{i}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Algebraic properties
+\end_layout
+
+\begin_layout Enumerate
+Commutativity: 
+\begin_inset Formula $\mathbf{f}\cdot\mathbf{g}=\mathbf{g}\cdot\mathbf{f}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Distribution over linear combinations: 
+\begin_inset Formula $\left(\alpha\mathbf{f}+\beta\mathbf{g}\right)\cdot\mathbf{h}=\alpha\left(\mathbf{f}\cdot\mathbf{h}\right)+\beta\left(\mathbf{g}\cdot\mathbf{h}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Positive definiteness of dot product of a vector with itself: 
+\begin_inset Formula $\mathbf{f}\cdot\mathbf{f}>0$
+\end_inset
+
+ for all 
+\begin_inset Formula $\mathbf{f}\ne0$
+\end_inset
+
+, and 
+\begin_inset Formula $\mathbf{f}\cdot\mathbf{f}=0$
+\end_inset
+
+ only when 
+\begin_inset Formula $\mathbf{f}=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The dot product distributes over sums of any length.
+ The dot product with a sum is equal to the sum of the dot products:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbf{f}\cdot\sum_{j=1}^{N}c_{j}\mathbf{v}_{j}=\sum_{j=1}^{N}c_{j}\left(\mathbf{f}\cdot\mathbf{v}_{j}\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{f}\times\mathbf{g}=-\mathbf{g}\times\mathbf{f}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(\alpha\mathbf{f}+\beta\mathbf{g}\right)\times\mathbf{h}=\alpha\left(\mathbf{f}\times\mathbf{h}\right)+\beta\left(\mathbf{g}\times\mathbf{h}\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{f}\times\mathbf{f}=0$
+\end_inset
+
+ for all 
+\begin_inset Formula $\mathbf{f}$
+\end_inset
+
+
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbf{f}\times\sum_{j=1}^{N}c_{j}\mathbf{v}_{j}=\sum_{j=1}^{N}c_{j}\left(\mathbf{f}\times\mathbf{v}_{j}\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Geometry
+\end_layout
+
+\begin_layout Section
+Applications
+\end_layout
+
+\begin_layout Subsection
+Resolving a vector into components
+\end_layout
+
+\begin_layout Subsection
+Closest approach problems
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbf{r}\left(t\right)=\mathbf{r}_{0}+\mathbf{v}_{0}t
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Minimize
+\begin_inset Formula 
+\[
+f\left(t\right)=\left\Vert \mathbf{b}-\mathbf{r}\left(t\right)\right\Vert ^{2}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\mathbf{b}\cdot\mathbf{b}-2\mathbf{b}\cdot\mathbf{r}\left(t\right)+\mathbf{r}\left(t\right)\cdot\mathbf{r}\left(t\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+f'\left(t\right)=-2\mathbf{b}\cdot\mathbf{r}'\left(t\right)+2\mathbf{r}\left(t\right)\cdot\mathbf{r}'\left(t\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=-2\mathbf{b}\cdot\mathbf{v}_{0}+2\mathbf{v}_{0}\cdot\left(\mathbf{r}_{0}+\mathbf{v}_{0}t\right)
+\]
+
+\end_inset
+
+Find 
+\begin_inset Formula $t_{\text{min}}$
+\end_inset
+
+ such that 
+\begin_inset Formula $f'\left(t_{\text{min}}\right)=0$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+t_{\text{min}}=\frac{\mathbf{v}_{0}\cdot\left(\mathbf{b}-\mathbf{r}_{0}\right)}{\mathbf{v}_{0}\cdot\mathbf{v}_{0}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+LOS velocity
+\end_layout
+
+\begin_layout Section
+\start_of_appendix
+Equivalance of geometric and algebraic dot product definitions
+\end_layout
+
+\begin_layout Section
+Why you can't divide by a vector
+\end_layout
+
+\end_body
+\end_document

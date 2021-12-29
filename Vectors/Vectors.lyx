@@ -1,0 +1,2222 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass extbook
+\begin_preamble
+\input{../Main/LyxNotesPreamble.tex}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams
+theorems-ams-extended
+\end_modules
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "palatino" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 1
+\bibtex_command default
+\index_command default
+\float_placement h
+\paperfontsize 12
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style siam
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\branch answers
+\selected 1
+\filename_suffix 0
+\color #5555ff
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 0.9in
+\topmargin 0.75in
+\rightmargin 0.9in
+\bottommargin 0.75in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Vectors"
+
+\end_inset
+
+Vectors & Coordinates
+\end_layout
+
+\begin_layout Standard
+About half of this chapter will be material (vector algebra and derivatives
+ of vectors) that you've seen before.
+ We'll review the basics, then dig more deeply into vectors in non-Cartesian
+ coordinates and applications to physics.
+ 
+\end_layout
+
+\begin_layout Itemize
+Hassani 1, 2
+\end_layout
+
+\begin_layout Itemize
+Review: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Hassani 1.1, 2.1-2.2
+\end_layout
+
+\begin_layout Itemize
+SST 9.1-9.4, 10.1-10.5
+\end_layout
+
+\begin_layout Itemize
+OSTX III 1.1-1.3, 2.1-4, 3.1-2, 3.4 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Definitions and arithmetic
+\end_layout
+
+\begin_layout Itemize
+A vector in three(two) dimensions is an ordered triple(pair) of real numbers.
+ The entries in the vector are called its 
+\series bold
+components
+\series default
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+Vectors add/subtract component-wise: if 
+\begin_inset Formula $\mathbf{a}=\left(a_{x},a_{y}\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{b}=\left(b_{x},b_{y}\right)$
+\end_inset
+
+, then
+\begin_inset Formula 
+\[
+\mathbf{a}\pm\mathbf{b}=\left(a_{x}\pm b_{x},a_{y}\pm b_{y}\right).
+\]
+
+\end_inset
+
+This is true regardless of which unit vectors are used.
+ You can visualize it with the parallelogram rule.
+ 
+\end_layout
+
+\begin_layout Itemize
+Multiplication of a vector by a scalar multiplies each component by that
+ scalar:
+\begin_inset Formula 
+\[
+\alpha\mathbf{a}=\left(\alpha a_{x},\alpha a_{y}\right).
+\]
+
+\end_inset
+
+It 
+\begin_inset Quotes eld
+\end_inset
+
+scales
+\begin_inset Quotes erd
+\end_inset
+
+ the vector by the factor 
+\begin_inset Formula $\alpha$
+\end_inset
+
+.
+ If 
+\begin_inset Formula $\alpha<0$
+\end_inset
+
+, the direction is reversed and the magnitude is multiplied by 
+\begin_inset Formula $\left|\alpha\right|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+The 
+\series bold
+magnitude 
+\series default
+of a vector is its Pythagorean length:
+\begin_inset Formula 
+\[
+\left\Vert \mathbf{a}\right\Vert =\sqrt{a_{x}^{2}+a_{y}^{2}}
+\]
+
+\end_inset
+
+in 2D and 
+\begin_inset Formula 
+\[
+\left\Vert \mathbf{a}\right\Vert =\sqrt{a_{x}^{2}+a_{y}^{2}+a_{z}^{2}}
+\]
+
+\end_inset
+
+in 3D.
+ Some books with use single bars, 
+\begin_inset Formula $\left|\mathbf{a}\right|$
+\end_inset
+
+, where we use double bars.
+ We'll also sometimes write 
+\begin_inset Formula $a$
+\end_inset
+
+ for the magnitude of 
+\begin_inset Formula $\mathbf{a}$
+\end_inset
+
+.
+ When this notation is used it's especially important to use some distinguishing
+ notation for vectors; otherwise, you'll quickly become confused between
+ the scalar 
+\begin_inset Formula $a$
+\end_inset
+
+ and the vector 
+\begin_inset Formula $\mathbf{a}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+In 2D, we can write the components of 
+\begin_inset Formula $\mathbf{a}$
+\end_inset
+
+ in polar form as 
+\begin_inset Formula $\left(a\cos\phi,a\sin\phi\right)$
+\end_inset
+
+, where 
+\begin_inset Formula $a=\left\Vert \mathbf{a}\right\Vert $
+\end_inset
+
+ and 
+\begin_inset Formula $\phi$
+\end_inset
+
+ is the angle from the 
+\begin_inset Formula $x$
+\end_inset
+
+ axis, running CCW.
+ There's also a polar form for 3D vectors, but we'll wait on that until
+ we've laid some more foundation.
+ 
+\end_layout
+
+\begin_layout Subsection
+Unit vectors
+\end_layout
+
+\begin_layout Standard
+In 2D, define 
+\begin_inset Formula $\ihat=\left(1,0\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $\jhat=\left(0,1\right)$
+\end_inset
+
+.
+ Then any 2D vector 
+\begin_inset Formula $\mathbf{a}=\left(a_{x},a_{y}\right)$
+\end_inset
+
+ can be written as 
+\begin_inset Formula 
+\[
+\mathbf{a}=a_{x}\ihat+a_{y}\jhat.
+\]
+
+\end_inset
+
+In 3D, we have 
+\begin_inset Formula $\ihat=\left(1,0,0\right)$
+\end_inset
+
+, 
+\begin_inset Formula $\jhat=\left(0,1,0\right)$
+\end_inset
+
+, and 
+\begin_inset Formula $\khat=\left(0,0,1\right)$
+\end_inset
+
+, and we can write any 
+\begin_inset Formula $\mathbf{a}$
+\end_inset
+
+ as
+\begin_inset Formula 
+\[
+\mathbf{a}=a_{x}\ihat+a_{y}\jhat+a_{z}\khat.
+\]
+
+\end_inset
+
+The 
+\begin_inset Formula $\ihat$
+\end_inset
+
+, 
+\begin_inset Formula $\jhat$
+\end_inset
+
+ system in 2D and 
+\begin_inset Formula $\ihat,\jhat,\khat$
+\end_inset
+
+ systems in 3D are orthogonal: 
+\begin_inset Formula $\ihat\perp\jhat$
+\end_inset
+
+, 
+\begin_inset Formula $\ihat\perp\khat$
+\end_inset
+
+, and 
+\begin_inset Formula $\jhat\perp\khat$
+\end_inset
+
+.
+ Since these vectors also have unit magnitude (they're 
+\series bold
+normalized
+\series default
+) we call these systems 
+\series bold
+orthonormal
+\series default
+.
+ 
+\end_layout
+
+\begin_layout Standard
+You might also see the symbols 
+\begin_inset Formula $\xhat$
+\end_inset
+
+, 
+\begin_inset Formula $\yhat$
+\end_inset
+
+, and 
+\begin_inset Formula $\zhat$
+\end_inset
+
+ in place of 
+\begin_inset Formula $\ihat$
+\end_inset
+
+, 
+\begin_inset Formula $\jhat$
+\end_inset
+
+, and 
+\begin_inset Formula $\khat$
+\end_inset
+
+.
+ When working with generic unit vectors we'll often use the symbol 
+\begin_inset Formula $\ehat$
+\end_inset
+
+ (from German 
+\emph on
+einheit
+\emph default
+, unit).
+ For example, in an orthogonal system of unit vectors we have 
+\begin_inset Formula $\ehat_{i}\perp\ehat_{j}$
+\end_inset
+
+ when 
+\begin_inset Formula $i\ne j$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Given any vector 
+\begin_inset Formula $\mathbf{a}$
+\end_inset
+
+, we can produce a unit vector in the direction of 
+\begin_inset Formula $\mathbf{a}$
+\end_inset
+
+ by dividing by its magnitude,
+\begin_inset Formula 
+\[
+\boldsymbol{\hat{a}}=\frac{\mathbf{a}}{\left\Vert \mathbf{a}\right\Vert }.
+\]
+
+\end_inset
+
+This procedure is called 
+\series bold
+normalization
+\series default
+.
+ 
+\end_layout
+
+\begin_layout Section
+Dot product
+\end_layout
+
+\begin_layout Standard
+The dot product takes two vectors as arguments, and returns a scalar.
+ 
+\end_layout
+
+\begin_layout Itemize
+If 
+\begin_inset Formula $\mathbf{a}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+ are represented in terms of their Cartesian components, define the dot
+ product by:
+\begin_inset Formula 
+\[
+\mathbf{a}\cdot\mathbf{b}=\sum_{j=1}^{3}a_{j}b_{j}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Properties: from the definition you can show that for all vectors 
+\begin_inset Formula $\mathbf{a}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+ and scalars 
+\begin_inset Formula $\alpha$
+\end_inset
+
+,
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{a}\cdot\mathbf{b}=\mathbf{b}\cdot\mathbf{a}$
+\end_inset
+
+ (
+\emph on
+the dot product is commutative
+\emph default
+)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left(\alpha\mathbf{a}\right)\cdot\mathbf{b}=\alpha\left(\mathbf{a}\cdot\mathbf{b}\right)$
+\end_inset
+
+ (
+\emph on
+the dot product commutes with scalar multiplication
+\emph default
+)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{a}\cdot\left(\mathbf{b}+\mathbf{c}\right)=\mathbf{a}\cdot\mathbf{b}+\mathbf{a}\cdot\mathbf{b}$
+\end_inset
+
+ (
+\emph on
+the dot product distributes over addition
+\emph default
+)
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{a}\cdot\mathbf{a}\ge0$
+\end_inset
+
+, and 
+\begin_inset Formula $\mathbf{a}\cdot\mathbf{a}=0$
+\end_inset
+
+ iff 
+\begin_inset Formula $\mathbf{a}=0$
+\end_inset
+
+ (
+\emph on
+the dot product is positive definite)
+\end_layout
+
+\begin_layout Standard
+Properties 2 and 3 can be summed up in a single equation: 
+\begin_inset Formula $\mathbf{a}\cdot\left(\beta\mathbf{b}+\gamma\mathbf{c}\right)=\beta\left(\mathbf{a}\cdot\mathbf{b}\right)+\gamma\left(\mathbf{a}\cdot\text{\textbf{c}}\right)$
+\end_inset
+
+.
+ 
+\emph on
+Dot products distribute over linear combinations.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Let 
+\begin_inset Formula $\theta_{ab}$
+\end_inset
+
+ be the angle between 
+\begin_inset Formula $\mathbf{a}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+.
+ With the angle addition formula, the dot product can be shown to be:
+\begin_inset Formula 
+\[
+\mathbf{a}\cdot\mathbf{b}=\left\Vert \mathbf{a}\right\Vert \left\Vert \mathbf{b}\right\Vert \cos\theta_{ab}.
+\]
+
+\end_inset
+
+Consequences: 
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\mathbf{a}\cdot\mathbf{b}=0$
+\end_inset
+
+ iff 
+\begin_inset Formula $\mathbf{a}\perp\mathbf{b}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\mathbf{a}\cdot\mathbf{a}=\left\Vert \mathbf{a}\right\Vert ^{2}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+Cauchy-Schwarz inequality: 
+\begin_inset Formula $\left|\mathbf{a}\cdot\mathbf{b}\right|\le\left\Vert \mathbf{a}\right\Vert \left\Vert \mathbf{b}\right\Vert $
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+If 
+\begin_inset Formula $\mathbf{a}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+ are represented in arbitrary unit vectors 
+\begin_inset Formula $\mathbf{e}_{j}$
+\end_inset
+
+, then 
+\begin_inset Formula 
+\[
+\mathbf{a}\cdot\mathbf{b}=\sum_{i=1}^{3}\sum_{j=1}^{3}a_{i}b_{j}\ehat_{i}\cdot\ehat_{j}.
+\]
+
+\end_inset
+
+If those unit vectors are orthonormal (
+\begin_inset Formula $\ehat_{i}\cdot\ehat_{j}=\delta_{ij}$
+\end_inset
+
+), then the preceding result simplifies to
+\begin_inset Formula 
+\[
+\mathbf{a}\cdot\mathbf{b}=\sum_{j=1}^{3}a_{j}b_{j}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Applications of the dot product
+\end_layout
+
+\begin_layout Standard
+The principal uses of the dot product will be:
+\end_layout
+
+\begin_layout Itemize
+To find the component of 
+\begin_inset Formula $\mathbf{a}$
+\end_inset
+
+ along a unit vector 
+\begin_inset Formula $\boldsymbol{\hat{p}}$
+\end_inset
+
+, compute 
+\begin_inset Formula $\boldsymbol{\hat{p}\cdot a}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+To find the magnitude of 
+\begin_inset Formula $\mathbf{a}$
+\end_inset
+
+, compute 
+\begin_inset Formula $\left\Vert \mathbf{a}\right\Vert =\sqrt{\mathbf{a}\cdot\mathbf{a}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+To check if 
+\begin_inset Formula $\mathbf{a}\perp\mathbf{b}$
+\end_inset
+
+, check if 
+\begin_inset Formula $\mathbf{a}\cdot\mathbf{b}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+With orthonormal unit vectors, any vector can be resolved into components
+ as follows:
+\begin_inset Formula 
+\[
+\mathbf{a}=\left(\ehat_{1}\cdot\mathbf{a}\right)\ehat_{1}+\left(\ehat_{2}\cdot\mathbf{a}\right)\ehat_{2}+\left(\ehat_{3}\cdot\mathbf{a}\right)\ehat_{3}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+These have many applications in analyzing the geometry of physical problems.
+ Spoiler: we'll develop an abstract generalization of the dot product that
+ lets us apply these ideas to 
+\emph on
+functions
+\emph default
+ as well as 
+\begin_inset Quotes eld
+\end_inset
+
+ordinary
+\begin_inset Quotes erd
+\end_inset
+
+ 3D vectors.
+ For now, we stick with the concrete.
+\end_layout
+
+\begin_layout Subsubsection
+A familiar application: block on an inclined plane
+\end_layout
+
+\begin_layout Standard
+You've likely encountered the problem of a block sliding on an inclined
+ plane.
+ The key step is to resolve the downward gravitational force 
+\begin_inset Formula $\mathbf{F}_{g}$
+\end_inset
+
+ into two components: 
+\begin_inset Formula $\mathbf{F}_{\parallel}$
+\end_inset
+
+ down along the plane's surface and 
+\begin_inset Formula $\mathbf{F}_{\perp}$
+\end_inset
+
+ normal to it.
+ By contemplating triangles you can see that 
+\begin_inset Formula $\mathbf{F}_{\parallel}$
+\end_inset
+
+ has magnitude 
+\begin_inset Formula $mg\sin\alpha$
+\end_inset
+
+.
+ The distance traveled down a frictionless plane starting from rest is then
+\begin_inset Formula 
+\[
+s\left(t\right)=s_{0}-\frac{1}{2}gt^{2}\sin\alpha.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In more complicated problems it's harder to work out vector components by
+ inspection.
+ Following the general principle that 
+\begin_inset Quotes eld
+\end_inset
+
+
+\emph on
+algebra is a way to substitute computation for thinking
+\emph default
+,
+\begin_inset Quotes erd
+\end_inset
+
+ we'll develop a systematic method for finding components.
+ In the inclined plane example, we introduce an orthonormal set of unit
+ vectors, a tangent vector 
+\begin_inset Formula $\boldsymbol{\hat{\tau}}$
+\end_inset
+
+ down along the plane and a normal vector 
+\begin_inset Formula $\boldsymbol{\hat{n}}$
+\end_inset
+
+ outward from the plane.
+ By construction, we have 
+\begin_inset Formula $\boldsymbol{\hat{\tau}\cdot\hat{n}}=0$
+\end_inset
+
+.
+ Write 
+\begin_inset Formula $\mathbf{F}$
+\end_inset
+
+ in terms of these unit vectors,
+\begin_inset Formula 
+\[
+\mathbf{F}=F_{\tau}\boldsymbol{\hat{\tau}}+F_{n}\boldsymbol{\hat{n}},
+\]
+
+\end_inset
+
+where the coefficients 
+\begin_inset Formula $F_{\tau}$
+\end_inset
+
+ and 
+\begin_inset Formula $F_{n}$
+\end_inset
+
+ are to be determined.
+ To find the components along each unit vector, use the dot product.
+ Dot 
+\begin_inset Formula $\boldsymbol{\hat{\tau}}$
+\end_inset
+
+ into 
+\begin_inset Formula $\mathbf{F}$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+\boldsymbol{\hat{\tau}}\cdot\mathbf{F}=F_{\tau}\left(\boldsymbol{\hat{\tau}\cdot\hat{\tau}}\right)+F_{n}\left(\boldsymbol{\hat{\tau}\cdot\hat{n}}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=1F_{\tau}+0F_{n}=F_{\tau},
+\]
+
+\end_inset
+
+so we find
+\begin_inset Formula 
+\[
+F_{\tau}=\text{\ensuremath{\boldsymbol{\hat{\tau}}}\ensuremath{\cdot\mathbf{F}}}.
+\]
+
+\end_inset
+
+Similarly, dot 
+\begin_inset Formula $\boldsymbol{\hat{n}}$
+\end_inset
+
+ into 
+\begin_inset Formula $\mathbf{F}$
+\end_inset
+
+ to find the normal component,
+\begin_inset Formula 
+\[
+F_{n}=\boldsymbol{\hat{n}}\cdot\mathbf{F}.
+\]
+
+\end_inset
+
+All of this can be represented compactly in the formula
+\begin_inset Formula 
+\[
+\mathbf{F}=\left(\boldsymbol{\hat{\tau}}\cdot\mathbf{F}\right)\boldsymbol{\hat{\tau}}+\left(\boldsymbol{\hat{n}}\cdot\mathbf{F}\right)\boldsymbol{\hat{n}}.
+\]
+
+\end_inset
+
+With 
+\begin_inset Formula $\mathbf{F}$
+\end_inset
+
+ appearing on both sides, here's what the formula means: given some 
+\begin_inset Formula $\mathbf{F}$
+\end_inset
+
+ and an orthonormal unit vector set , resolve it into components along 
+\begin_inset Formula $\boldsymbol{\hat{\tau}}$
+\end_inset
+
+ and 
+\begin_inset Formula $\boldsymbol{\hat{n}}$
+\end_inset
+
+ by taking dot products 
+\begin_inset Formula $\tauhat\cdot\mathbf{F}$
+\end_inset
+
+ and 
+\begin_inset Formula $\nhat\cdot\mathbf{F}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename BlockOnPlane1.jpeg
+	lyxscale 4
+	width 40col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Gravitational-force-acting"
+
+\end_inset
+
+Gravitational force acting on a block on an inclined plane.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+A less familiar application: polarized light
+\end_layout
+
+\begin_layout Standard
+In an electromagnetics course you'll learn that light is a wave in an EM
+ field.
+ Plane EM waves are transverse: if a plane wave is traveling in the 
+\begin_inset Formula $x$
+\end_inset
+
+direction (along 
+\begin_inset Formula $\mathbf{\ihat}$
+\end_inset
+
+) then 
+\begin_inset Formula $\mathbf{E}\perp\ihat$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{B}\perp\ihat$
+\end_inset
+
+ , which we can express using the dot product: 
+\begin_inset Formula $\mathbf{E}\cdot\mathbf{\ihat=}0$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{B}\cdot\ihat=0$
+\end_inset
+
+.
+ It can also be shown that in a plane wave 
+\begin_inset Formula $\mathbf{E}\perp\mathbf{B}$
+\end_inset
+
+.
+ In the rest of this discussion we'll focus on the electric field and ignore
+ the magnetic field.
+ The polarization state of a wave is the direction of the electric field
+ 
+\begin_inset Formula $\mathbf{E}$
+\end_inset
+
+.
+ A typical light source (an LED bulb, a star, etc) emits light that is unpolariz
+ed: a superposition of different polarization states.
+ 
+\end_layout
+
+\begin_layout Standard
+Although most (not all!) emitters produce unpolarized light, it is possible
+ to obtain polarized light.
+ Materials called polarizers transmit only light with a specific polarization
+ state, absorbing all else.
+ Unpolarized light entering a polarizer emerges polarized.
+ Other processes can select for certain polarizations; these include scattering
+ and reflection.
+ We'll focus on polarizing materials, and consider a polarizer to be a 
+\begin_inset Quotes eld
+\end_inset
+
+black box
+\begin_inset Quotes erd
+\end_inset
+
+ that selects a particular polarization.
+ 
+\end_layout
+
+\begin_layout Standard
+For a mathematical model of the action of a polarizer, we need two vectors:
+ 
+\begin_inset Formula $\mathbf{E}$
+\end_inset
+
+ and 
+\begin_inset Formula $\phat$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Resolving a vector into orthogonal components
+\end_layout
+
+\begin_layout Standard
+This is important enough to call out.
+\end_layout
+
+\begin_layout BoxedImportant
+If 
+\begin_inset Formula $\left\{ \ehat_{i}\right\} _{i=1}^{n}$
+\end_inset
+
+ is an orthonormal set of unit vectors in the space 
+\begin_inset Formula $\RR^{n}$
+\end_inset
+
+, then any vector 
+\begin_inset Formula $\mathbf{F}\in\RR^{n}$
+\end_inset
+
+ can be expanded uniquely as
+\begin_inset Formula 
+\[
+\mathbf{F}=\sum_{j=1}^{n}F_{j}\ehat_{j},
+\]
+
+\end_inset
+
+where the 
+\begin_inset Formula $j$
+\end_inset
+
+-th coefficient 
+\begin_inset Formula $F_{j}$
+\end_inset
+
+ is
+\begin_inset Formula 
+\[
+F_{j}=\ehat_{j}\cdot\mathbf{F}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Cross product
+\end_layout
+
+\begin_layout Standard
+Two vectors 
+\begin_inset Formula $\mathbf{a}$
+\end_inset
+
+ and 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+ define a parallelogram.
+ A direction, or orientation, can be assigned to the parallelogram using
+ the right-hand rule: start with your right fingers along 
+\begin_inset Formula $\mathbf{a}$
+\end_inset
+
+, curl your fingers into 
+\begin_inset Formula $\mathbf{b}$
+\end_inset
+
+, and your thumb indicates the direction of 
+\begin_inset Formula $\mathbf{a}\times\mathbf{b}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+Definition: The cross product 
+\begin_inset Formula $\mathbf{a}\times\mathbf{b}$
+\end_inset
+
+ is the vector in the direction given by the right-hand rule, having magnitude
+ 
+\begin_inset Formula $\left\Vert \mathbf{a\times}\mathbf{b}\right\Vert $
+\end_inset
+
+ equal to the area of the parallelogram.
+ 
+\end_layout
+
+\begin_layout Itemize
+Consequences: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{a}\times\mathbf{b}=-\mathbf{b}\times\mathbf{a}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{a}\times\mathbf{a}=\mathbf{0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\mathbf{a}\cdot\left(\mathbf{a}\times\mathbf{b}\right)=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\Vert \mathbf{a}\times\mathbf{b}\right\Vert =\left\Vert \mathbf{a}\right\Vert \left\Vert \mathbf{b}\right\Vert \left|\sin\theta_{ab}\right|$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+You can compute the cross product using the determinant formula
+\begin_inset Formula 
+\[
+\mathbf{a}\times\mathbf{b}=\left|\begin{array}{ccc}
+\ihat & \jhat & \khat\\
+a_{x} & a_{y} & a_{z}\\
+b_{x} & b_{y} & b_{z}
+\end{array}\right|=\left(a_{y}b_{z}-a_{z}b_{y}\right)\ihat-\left(a_{x}b_{z}-a_{z}b_{x}\right)\jhat+\left(a_{x}b_{y}-a_{y}b_{x}\right)\khat.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Orthogonal curvilinear coordinates
+\end_layout
+
+\begin_layout Standard
+If 
+\begin_inset Formula $\left\langle q_{1},q_{2},q_{3}\right\rangle $
+\end_inset
+
+ are orthogonal curvilinear coordinates, then the scale factors 
+\begin_inset Formula $h_{j}$
+\end_inset
+
+ are
+\begin_inset Formula 
+\[
+h_{j}=\left\Vert \pd{\mathbf{r}}{q_{j}}\right\Vert ,
+\]
+
+\end_inset
+
+and the unit vectors tangent to the 
+\begin_inset Formula $q_{1}$
+\end_inset
+
+ coordinate line, then
+\begin_inset Formula 
+\[
+\ehat_{j}=\frac{1}{h_{j}}\pd{\mathbf{r}}{q_{j}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:The-three-most"
+
+\end_inset
+
+The three most important coordinate systems
+\end_layout
+
+\begin_layout Itemize
+Cartesian: 
+\begin_inset Formula $\mathbf{r}\left(z,y,z\right)=x\ihat+y\jhat+z\khat$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $h_{x}=h_{y}=h_{z}=1$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Cylindrical polar coordinates: 
+\begin_inset Formula $\mathbf{r}\left(\rho,\phi,z\right)=\rho\left(\ihat\cos\phi+\jhat\sin\phi\right)+z\zhat$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $h_{\rho}=1$
+\end_inset
+
+; 
+\begin_inset Formula $\rhohat=\ihat\cos\phi+\jhat\sin\phi$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $h_{\phi}=\rho$
+\end_inset
+
+; 
+\begin_inset Formula $\phihat=-\ihat\sin\phi+\jhat\cos\phi$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $h_{z}=1$
+\end_inset
+
+; 
+\begin_inset Formula $\zhat=\khat$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Notice that 
+\begin_inset Formula $\mathbf{r}=\rho\rhohat+z\zhat$
+\end_inset
+
+.
+ When 
+\begin_inset Formula $z=0$
+\end_inset
+
+, the system reduces to 2D polar (
+\begin_inset Quotes eld
+\end_inset
+
+plane polar
+\begin_inset Quotes erd
+\end_inset
+
+) coordinates.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Spherical polar coordinates: 
+\begin_inset Formula $\mathbf{r}\left(r,\theta,\phi\right)=r\left(\left(\ihat\cos\phi+\jhat\sin\phi\right)\sin\theta+\khat\cos\theta\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $h_{r}=1$
+\end_inset
+
+; 
+\begin_inset Formula $\boldsymbol{\hat{r}}=\left(\ihat\cos\phi+\jhat\sin\phi\right)\sin\theta+\khat\cos\theta$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $h_{\theta}=r$
+\end_inset
+
+; 
+\begin_inset Formula $\thetahat=\left(\ihat\cos\phi+\jhat\sin\phi\right)\cos\theta-\khat\sin\theta$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $h_{\phi}=r\sin\theta$
+\end_inset
+
+; 
+\begin_inset Formula $\phihat=-\ihat\sin\phi+\jhat\cos\phi$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Notice that 
+\begin_inset Formula $\mathbf{r}=r\boldsymbol{\hat{r}}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Except in Cartesian coordinates, the unit vectors depend on the coordinates.
+ One consequence to be explored below is that if a particle's position is
+ described in non-Cartesian coordinates, the unit vectors change as the
+ particle moves.
+\end_layout
+
+\begin_layout Standard
+Certainly in cylindrical and possibly in spherical coordinates you can reason
+ through the geometry to figure out the unit vectors, and skip the calculation
+ of the scale factors and partial derivatives.
+ However, the geometrical reasoning gets much more complicated for coordinate
+ systems such as ellipsoidal or parabolic coordinates, while the brute force
+ calculation will always work.
+ The calculation might be complicated, but it's mindless and can be done
+ by a computer.
+ 
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Cartesian-to-non-Cartesian"
+
+\end_inset
+
+Cartesian unit vectors represented in non-Cartesian coordinates
+\end_layout
+
+\begin_layout Standard
+It's sometimes useful (see 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:pendulum-equation-of-motion"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ below) to write the Cartesian unit vectors in terms of unit vectors in
+ another system.
+ We can do this with dot products: for example, to find the components of
+ 
+\begin_inset Formula $\ihat$
+\end_inset
+
+ in the cylindrical unit vectors, write 
+\begin_inset Formula $\ihat$
+\end_inset
+
+ as
+\begin_inset Formula 
+\[
+\ihat=\left(\ihat\cdot\rhohat\right)\rhohat+\left(\ihat\cdot\phihat\right)\phihat+\left(\ihat\cdot\zhat\right)\zhat
+\]
+
+\end_inset
+
+and work through the algebra,
+\begin_inset Formula 
+\[
+\ihat\cdot\rhohat=\cos\phi
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\ihat\cdot\phihat=-\sin\phi
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\ihat\cdot\zhat=0,
+\]
+
+\end_inset
+
+leading to the result
+\begin_inset Formula 
+\[
+\ihat=\rhohat\cos\phi-\phihat\sin\phi.
+\]
+
+\end_inset
+
+A similar calculation finds
+\begin_inset Formula 
+\[
+\jhat=\rhohat\sin\phi+\phihat\cos\phi
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\khat=\zhat.
+\]
+
+\end_inset
+
+The same procedure can be used to do any transformation between any two
+ systems of orthonormal unit vectors.
+\end_layout
+
+\begin_layout Section
+Time derivatives of vectors and products
+\end_layout
+
+\begin_layout Itemize
+Differentiate a vector component-by-component:
+\begin_inset Formula 
+\[
+\od{\mathbf{f}}{t}=\od{}{t}\left[\sum_{j=1}^{3}f_{j}\left(t\right)\ehat_{j}\left(t\right)\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\sum_{j=1}^{3}\od{f_{j}}{t}\ehat_{j}+\sum_{j=1}^{3}f_{j}\od{\ehat_{j}}{t}.
+\]
+
+\end_inset
+
+When the unit vectors 
+\begin_inset Formula $\left\{ \ehat_{j}\right\} $
+\end_inset
+
+ are constant in time, then the second term is zero.
+ 
+\end_layout
+
+\begin_layout Itemize
+By grinding through the ordinary product rule, you can easily show the following
+:
+\begin_inset Formula 
+\[
+\od{}{t}\left(\alpha\mathbf{f}\right)=\alpha\od{\mathbf{f}}{t}+\od{\alpha}{t}\mathbf{f}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\od{}{t}\left(\mathbf{f}\cdot\mathbf{g}\right)=\od{\mathbf{f}}{t}\cdot\mathbf{g}+\mathbf{f}\cdot\od{\mathbf{g}}{t}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\od{}{t}\left(\mathbf{f}\cdot\mathbf{f}\right)=2\mathbf{f}\cdot\od{\mathbf{f}}{t}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\od{}{t}\left(\mathbf{f}\times\mathbf{g}\right)=\od{\mathbf{f}}{t}\times\mathbf{g}+\mathbf{f}\times\od{\mathbf{g}}{t}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Applications
+\end_layout
+
+\begin_layout Subsubsection
+Angular momentum and torque
+\end_layout
+
+\begin_layout Standard
+The angular momentum of a particle is 
+\begin_inset Formula $\mathbf{L}=m\mathbf{r}\times\mathbf{v}$
+\end_inset
+
+.
+ Differentiate 
+\begin_inset Formula $\mathbf{L}$
+\end_inset
+
+, using the product rule for the cross product:
+\begin_inset Formula 
+\[
+\od{\mathbf{L}}{t}=m\od{\mathbf{r}}{t}\times\mathbf{v}+m\mathbf{r}\times\od{\mathbf{v}}{t}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=m\mathbf{v}\times\mathbf{v}+\mathbf{r}\times\left(m\mathbf{a}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\mathbf{r}\times\mathbf{F};
+\]
+
+\end_inset
+
+this is the familiar relation between angular momentum 
+\begin_inset Formula $\mathbf{L}$
+\end_inset
+
+ and torque 
+\begin_inset Formula $\mathbf{r}\times\mathbf{F}$
+\end_inset
+
+.
+ When the force is entirely radial, the torque is zero, so 
+\begin_inset Formula $\od{\mathbf{L}}{t}=0$
+\end_inset
+
+ and therefore 
+\begin_inset Formula $\mathbf{L}=\text{constant}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Motion in a magnetic field
+\end_layout
+
+\begin_layout Standard
+The Lorentz force on a charged particle in a magnetic field is 
+\begin_inset Formula $\mathbf{F}=q\mathbf{v}\times\mathbf{B}$
+\end_inset
+
+; the nonrelativistic equation of motion is
+\begin_inset Formula 
+\[
+m\od{\mathbf{v}}{t}=q\mathbf{v}\times\mathbf{B}.
+\]
+
+\end_inset
+
+We won't solve this equation now; however, we can deduce some properties
+ of the motion even without a full solution.
+ 
+\end_layout
+
+\begin_layout Itemize
+The acceleration is 
+\begin_inset Formula $\perp$
+\end_inset
+
+ to the velocity.
+ 
+\end_layout
+
+\begin_layout Itemize
+The magnitude of the velocity is constant.
+ To prove this, compute
+\begin_inset Formula 
+\[
+\od{}{t}\left(\left\Vert \mathbf{v}\right\Vert ^{2}\right)=2\mathbf{v}\cdot\od{\mathbf{v}}{t}
+\]
+
+\end_inset
+
+and use the equation of motion and vector identities to find the result.
+\end_layout
+
+\begin_layout Subsection
+Time derivatives of unit vectors
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $\mathbf{e}$
+\end_inset
+
+ be any unit vector.
+ Then 
+\begin_inset Formula $\od{\ehat}{t}\perp\ehat$
+\end_inset
+
+.
+ You can prove this using the product rule and the property 
+\begin_inset Formula $\ehat\cdot\ehat=1$
+\end_inset
+
+.
+ Here's how to understand it: if 
+\begin_inset Formula $\od{\ehat}{t}$
+\end_inset
+
+ had a component along 
+\begin_inset Formula $\ehat$
+\end_inset
+
+, then its magnitude would change; this is impossible, therefore 
+\begin_inset Formula $\od{\ehat}{t}$
+\end_inset
+
+ must be 
+\begin_inset Formula $\perp\ehat$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In Cartesian coordinates the unit vectors are independent of time.
+ In other coordinate systems, this will not be the case.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Cylindrical coordinates
+\end_layout
+
+\begin_layout Standard
+Differentiate the expressions for 
+\begin_inset Formula $\rhohat$
+\end_inset
+
+, 
+\begin_inset Formula $\phihat$
+\end_inset
+
+, and 
+\begin_inset Formula $\zhat$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\od{\rhohat}{t}=-\overdot{\phi}\ihat\sin\phi+\overdot{\phi}\jhat\cos\phi$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\od{\phihat}{t}=-\overdot{\phi}\ihat\cos\phi-\overdot{\phi}\jhat\sin\phi$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\od{\zhat}{t}=\mathbf{0}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+You'll usually want these in terms of the cylindrical unit vectors.
+ By inspection, you can spot that 
+\begin_inset Formula 
+\begin{gather*}
+\od{\rhohat}{t}=\overdot{\phi}\phihat\\
+\od{\phihat}{t}=-\overdot{\phi}\rhohat
+\end{gather*}
+
+\end_inset
+
+In more complicated coordinate systems it won't be so easy to spot the expansion
+ coefficients, but it's always possible to work them out using the dot product:
+\begin_inset Formula 
+\[
+\od{\rhohat}{t}=\left(\rhohat\cdot\od{\rhohat}{t}\right)\rhohat+\left(\phihat\cdot\od{\phihat}{t}\right)\phihat
+\]
+
+\end_inset
+
+which you can show is equal to 
+\begin_inset Formula $\overdot{\phi}\phihat$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In mechanics, we'll also want the second derivatives (used in accelerations).
+ The hard part was computing the first derivatives; with those in hand,
+ it follows that
+\begin_inset Formula 
+\begin{align*}
+\odd{\rhohat}{t}=\overddot{\phi}\phihat-\overdot{\phi}^{2}\rhohat\\
+\odd{\phihat}{t}=-\overddot{\phi}\rhohat-\overdot{\phi}^{2}\phihat
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Newton's second law in cylindrical coordinates
+\end_layout
+
+\begin_layout Standard
+For a particle with constant mass 
+\begin_inset Formula $m$
+\end_inset
+
+, Newton's second law of motion is
+\begin_inset Formula 
+\[
+m\odd{\mathbf{r}}{t}=\mathbf{F}.
+\]
+
+\end_inset
+
+In 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:The-three-most"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ we saw that 
+\begin_inset Formula $\mathbf{r}=\rho\rhohat+z\zhat$
+\end_inset
+
+.
+ The acceleration is
+\begin_inset Formula 
+\[
+\odd{\mathbf{r}}{t}=\overddot{\rho}\rhohat+2\overdot{\rho}\od{\rhohat}{t}+\rho\odd{\rhohat}{t}+\overddot{z}\zhat
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\left(\overddot{\rho}-\rho\overdot{\phi}^{2}\right)\rhohat+\left(\rho\overddot{\phi}+2\overdot{\rho}\overdot{\phi}\right)\phihat+\overddot{z}\zhat.
+\]
+
+\end_inset
+
+The equations of motion are
+\begin_inset Formula 
+\[
+m\left(\overddot{\rho}-\rho\overdot{\phi}^{2}\right)=F_{\rho}=\rhohat\cdot\mathbf{F}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+m\left(\rho\overddot{\phi}+2\overdot{\rho}\overdot{\phi}\right)=F_{\phi}=\phihat\cdot\mathbf{F}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+m\overddot{z}=F_{z}=\zhat\cdot\mathbf{F}.
+\]
+
+\end_inset
+
+This is a system of three coupled second order differential equations.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Angular momentum conservation again
+\end_layout
+
+\begin_layout Standard
+The angular equation of motion is
+\begin_inset Formula 
+\[
+m\left(\rho\overddot{\phi}+2\overdot{\rho}\overdot{\phi}\right)=F_{\phi}.
+\]
+
+\end_inset
+
+This is a second order differential equation involving both 
+\begin_inset Formula $\rho$
+\end_inset
+
+ and 
+\begin_inset Formula $\phi$
+\end_inset
+
+; it can't be solved without also solving the other two equations of motion.
+ But notice that if we introduce 
+\begin_inset Formula $L_{z}=m\rho^{2}\overdot{\phi}$
+\end_inset
+
+ and differentiate
+\begin_inset Formula 
+\[
+\od{}{t}\left(m\rho^{2}\overdot{\phi}\right)=m\rho^{2}\overddot{\phi}+2m\rho\overdot{\phi}\overdot{\rho},
+\]
+
+\end_inset
+
+we find 
+\begin_inset Formula 
+\[
+\od{L_{z}}{t}=\rho F_{\phi}.
+\]
+
+\end_inset
+
+When 
+\begin_inset Formula $F_{\phi}=0$
+\end_inset
+
+, the quantity 
+\begin_inset Formula $L_{z}$
+\end_inset
+
+ is constant in time.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Uniform circular motion
+\end_layout
+
+\begin_layout Standard
+Consider uniform circular motion in the plane 
+\begin_inset Formula $z=0$
+\end_inset
+
+, centered on the origin.
+ Cylindrical coordinates are the obvious choice for this problem; the radial
+ coordinate 
+\begin_inset Formula $\rho$
+\end_inset
+
+ remains constant while the angular coordinate varies linearly with time,
+\begin_inset Formula 
+\[
+\rho\left(t\right)=a;\;\;\;\phi\left(t\right)=\omega t+\phi_{0};\;\;\;z\left(t\right)=0
+\]
+
+\end_inset
+
+Then 
+\begin_inset Formula $\overdot{\rho}=0$
+\end_inset
+
+, 
+\begin_inset Formula $\overddot{\rho}=0$
+\end_inset
+
+, 
+\begin_inset Formula $\overdot{\phi}=\omega$
+\end_inset
+
+, and 
+\begin_inset Formula $\overddot{\phi}=0$
+\end_inset
+
+.
+ Plug into the equations of motion, finding 
+\begin_inset Formula 
+\[
+-m\rho\omega^{2}=F_{\rho}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+F_{\phi}=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+F_{z}=0.
+\]
+
+\end_inset
+
+The first of these equations is the well-known condition for the centripetal
+ force required to hold a particle in circular motion.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:pendulum-equation-of-motion"
+
+\end_inset
+
+Equation of motion of an ideal pendulum
+\end_layout
+
+\begin_layout Standard
+It will be convenient work in the 
+\begin_inset Formula $x-y$
+\end_inset
+
+ plane but to orient the 
+\begin_inset Formula $x$
+\end_inset
+
+ axis downwards and the 
+\begin_inset Formula $y$
+\end_inset
+
+ axis pointing to the right.
+ Then 
+\begin_inset Formula $\phi$
+\end_inset
+
+ is the angle (CCW) from the downward vertical, and the gravitational force
+ is 
+\begin_inset Formula $\mathbf{F}=mg\ihat$
+\end_inset
+
+.
+ Cylindrical coordinates are the natural choice: the pendulum moves, the
+ radial coordinate 
+\begin_inset Formula $\rho\left(t\right)$
+\end_inset
+
+ remains constant and the angular coordinate varies.
+ 
+\end_layout
+
+\begin_layout Standard
+The forces on the pendulum are gravitational, 
+\begin_inset Formula $\mathbf{F}_{\text{grav}}=mg\ihat$
+\end_inset
+
+, and an unknown, variable, tension in the pendulum rod, 
+\begin_inset Formula $\mathbf{F}_{\text{tens}}=F_{\text{tens}}\rhohat$
+\end_inset
+
+.
+ Since we're working in cylindrical coordinates, use the method of 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Cartesian-to-non-Cartesian"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ to write the gravitational force as
+\begin_inset Formula 
+\[
+\mathbf{F}_{\text{grav}}=mg\rhohat\cos\phi-mg\phihat\sin\phi.
+\]
+
+\end_inset
+
+In an ideal pendulum, the tension is a 
+\emph on
+constraint
+\emph default
+ that will be chosen to keep the length of the pendulum rod constant.
+ The total force is then
+\begin_inset Formula 
+\[
+\mathbf{F}=\left(mg\cos\phi+F_{\text{tens}}\right)\rhohat-mg\phihat\sin\phi
+\]
+
+\end_inset
+
+Write out the equations of motion (ignoring the unused coordinate 
+\begin_inset Formula $z$
+\end_inset
+
+), 
+\begin_inset Formula 
+\[
+m\left(\overddot{\rho}-\rho\overdot{\phi}^{2}\right)=mg\cos\phi+F_{\text{tens}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+m\left(\rho\overddot{\phi}+2\overdot{\rho}\overdot{\phi}\right)=-mg\sin\phi.
+\]
+
+\end_inset
+
+Since 
+\begin_inset Formula $\rho\left(t\right)$
+\end_inset
+
+ is the constant 
+\begin_inset Formula $\ell$
+\end_inset
+
+, these simplify to
+\begin_inset Formula 
+\[
+-m\ell\overdot{\phi}^{2}=mg\cos\phi+F_{\text{tens}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+m\ell\overddot{\phi}=-mg\sin\phi.
+\]
+
+\end_inset
+
+These are two differential equations with, apparently, only one unknown:
+ 
+\begin_inset Formula $\phi\left(t\right)$
+\end_inset
+
+.
+ However, the tension 
+\begin_inset Formula $F_{\text{tens}}$
+\end_inset
+
+ is a free variable that we choose to maintain a perfact balance with the
+ radial component of gravity and the fictitious radial force 
+\begin_inset Formula $m\ell\overdot{\phi}^{2}$
+\end_inset
+
+.
+ The first equation is then satisfied by assumption, leaving the equation
+ of motion for 
+\begin_inset Formula $\phi\left(t\right)$
+\end_inset
+
+,
+\begin_inset Formula 
+\[
+\overddot{\phi}=-\frac{g}{\ell}\sin\phi.
+\]
+
+\end_inset
+
+This equation is nonlinear and can't be solved exactly in closed form; a
+ useful approach when 
+\begin_inset Formula $\left|\phi\right|\ll1$
+\end_inset
+
+ is to use the small angle approximation 
+\begin_inset Formula $\sin\phi\approx\phi$
+\end_inset
+
+ to derive a linear equation
+\begin_inset Formula 
+\[
+\overddot{\phi}=-\frac{g}{\ell}\phi.
+\]
+
+\end_inset
+
+This is the harmonic oscillator equation 
+\begin_inset Formula $\overddot{\phi}+\omega_{0}^{2}\phi=0$
+\end_inset
+
+ with natural frequency 
+\begin_inset Formula $\omega_{0}=\sqrt{g/\ell}$
+\end_inset
+
+; we'll study this in great depth in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "chap:Second-order-ordinary-differenti"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+.
+ For now, recall from elementary physics that the solution to the simple
+ harmonic oscillator equation is
+\begin_inset Formula 
+\[
+\phi\left(t\right)=A\cos\left(\omega_{0}t+\delta_{0}\right),
+\]
+
+\end_inset
+
+where the amplitude 
+\begin_inset Formula $A$
+\end_inset
+
+ and phase 
+\begin_inset Formula $\delta_{0}$
+\end_inset
+
+ are found from the initial conditions 
+\begin_inset Formula $\phi\left(0\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $\phi'\left(0\right)$
+\end_inset
+
+.
+ The period of the motion (in the small angle approximation only) is
+\begin_inset Formula 
+\[
+T=\frac{2\pi}{\omega_{0}}=2\pi\sqrt{\frac{\ell}{g}}.
+\]
+
+\end_inset
+
+You will see later how to derive corrections to this formula when the amplitude
+ is large enough that the small angle approximation is no longer valid.
+ 
+\end_layout
+
+\end_body
+\end_document
