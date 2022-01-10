@@ -6,12 +6,12 @@
 \origin unavailable
 \textclass extbook
 \begin_preamble
-\input{../Main/LyxNotesPreamble.tex}
+\input{klmacros}
+\notesheader
 \end_preamble
 \use_default_options true
 \begin_modules
-theorems-ams
-theorems-ams-extended
+KL-theorems
 \end_modules
 \maintain_unincluded_children false
 \language english
@@ -43,15 +43,16 @@ theorems-ams-extended
 \pdf_bookmarksnumbered false
 \pdf_bookmarksopen false
 \pdf_bookmarksopenlevel 1
-\pdf_breaklinks false
+\pdf_breaklinks true
 \pdf_pdfborder false
 \pdf_colorlinks true
 \pdf_backref false
 \pdf_pdfusetitle true
+\pdf_quoted_options "urlcolor=darkgreen, linkcolor=darkgreen,citecolor=darkgreen"
 \papersize default
-\use_geometry true
-\use_package amsmath 1
-\use_package amssymb 1
+\use_geometry false
+\use_package amsmath 2
+\use_package amssymb 2
 \use_package cancel 1
 \use_package esint 1
 \use_package mathdots 1
@@ -59,7 +60,7 @@ theorems-ams-extended
 \use_package mhchem 1
 \use_package stackrel 1
 \use_package stmaryrd 1
-\use_package undertilde 1
+\use_package undertilde 0
 \cite_engine basic
 \cite_engine_type default
 \biblio_style siam
@@ -79,21 +80,17 @@ theorems-ams-extended
 \shortcut idx
 \color #008000
 \end_index
-\leftmargin 0.9in
-\topmargin 0.75in
-\rightmargin 0.9in
-\bottommargin 0.75in
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation skip
-\defskip medskip
+\defskip smallskip
 \is_math_indent 0
 \math_numbering_side default
 \quotes_style english
 \dynamic_quotes 0
 \papercolumns 1
 \papersides 1
-\paperpagestyle fancy
+\paperpagestyle default
 \tracking_changes false
 \output_changes false
 \html_math_output 0
@@ -104,7 +101,7 @@ theorems-ams-extended
 \begin_body
 
 \begin_layout Title
-Math methods annotations
+Math methods notes
 \end_layout
 
 \begin_layout Author
@@ -130,290 +127,19 @@ LatexCommand tableofcontents
 \end_inset
 
 
-\end_layout
-
-\begin_layout Chapter
-Resources
-\end_layout
-
-\begin_layout Section
-Textbook
-\end_layout
-
-\begin_layout Itemize
-Hassani, 
-\emph on
-Mathematical Methods For Students of Physics and Related Fields
-\emph default
-, 2009, Springer
-\end_layout
-
-\begin_layout Section
-Books to have handy for review
-\end_layout
-
-\begin_layout Itemize
-Your favorite calculus book.
- There are a gazillion calculus books out there, so pick one you like.
- Since I can't possibly provide references to every calculus book, I'll
- give you section references to two that are easily obtained by TTU students:
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-If you took calculus at TTU, you probably have: (SST) Smith, Strauss, and
- Toda, 
-\emph on
-Calculus
-\emph default
-, 2014, Kendall Hunt.
- 
-\end_layout
-
-\begin_layout Itemize
-A series of top-quality calculus books freely distributed online is: (OSTXC)
- OpenStax, 
-\emph on
-Calculus
-\emph default
-.
- You can download PDFs or apps.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Volume 1: 
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-https://openstax.org/details/books/calculus-volume-1
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Volume 2: 
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-https://openstax.org/details/books/calculus-volume-2
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Volume 3: 
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-https://openstax.org/details/books/calculus-volume-3
-\end_layout
-
-\end_inset
-
- 
-\end_layout
-
-\end_deeper
-\end_deeper
-\begin_layout Itemize
-Your favorite intro physics book.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-If you took intro physics at TTU, you probably have: (SJP) Serway and Jewett,
- 
-\emph on
-Physics for Scientists and Engineers
-\emph default
-, 2008, Thomson/Brooks/Cole.
- 
-\end_layout
-
-\begin_layout Itemize
-A series of intro physics books freely distributed online is: (OSTXP) OpenStax,
- 
-\emph on
-University Physics
-\emph default
-.
- You can download PDFs or apps.
- 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Volume 1: 
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-https://openstax.org/details/books/university-physics-volume-1
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Volume 2: 
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-https://openstax.org/details/books/university-physics-volume-2
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Volume 3: 
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-https://openstax.org/details/books/university-physics-volume-3
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-A classic available freely online is
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-(FLP) Feynman, Leighton, and Sands, 
-\emph on
-The Feynman Lectures on Physics
-\emph default
-, online edition: 
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-https://www.feynmanlectures.caltech.edu/
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\end_deeper
-\begin_layout Standard
 \begin_inset Separator plain
 \end_inset
 
 
 \end_layout
 
-\begin_layout Section
-Math reference handbook
-\end_layout
-
-\begin_layout Itemize
-(DLMF) Olver (ed),
-\emph on
- NIST digital library of mathematical functions
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Available online at 
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-https://dlmf.nist.gov/
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-This is an online edition of the hardcopy book 
-\emph on
-NIST Handbook of Mathematical Functions, 
-\emph default
-2010, Cambridge.
- 
-\end_layout
-
-\begin_layout Itemize
-The original 
-\emph on
-Handbook of Mathematical Functions, 
-\emph default
-edited by Abramowitz and Stegun, was published in 1964.
- It is now freely available in PDF form.
- There's an inexpensive Dover version if you like hardcopy.
- 
-\end_layout
-
-\end_deeper
 \begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-Online presentations
-\end_layout
-
-\begin_layout Itemize
-
-\series bold
-3Blue1Brown
-\series default
- video series by Grant Sanderson.
- These are wonderful.
- Some series of particular relvance to this course are:
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Calculus: 
-\begin_inset Flex URL
+\begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-https://www.3blue1brown.com/topics/calculus
+%% Helpful resources
 \end_layout
 
 \end_inset
@@ -421,104 +147,11 @@ https://www.3blue1brown.com/topics/calculus
 
 \end_layout
 
-\begin_layout Itemize
-Linear algebra: 
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-https://www.3blue1brown.com/topics/linear-algebra
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Differential equations: 
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-https://www.3blue1brown.com/topics/differential-equations
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Fourier analysis, vector calculus: in 
-\begin_inset Flex URL
-status open
-
-\begin_layout Plain Layout
-
-https://www.3blue1brown.com/topics/analysis
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
-\begin_layout Itemize
-
-\series bold
-MIT OpenCourseWare
-\series default
- has courses on many subjects.
- Relevant to this course are: 
-\end_layout
-
-\begin_deeper
-\begin_layout Itemize
-Differential equations: 
-\begin_inset CommandInset href
-LatexCommand href
-name "MIT 18.03"
-target "https://ocw.mit.edu/courses/mathematics/18-03-differential-equations-spring-2010/index.htm"
-literal "false"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Linear algebra: 
-\begin_inset CommandInset href
-LatexCommand href
-name "MIT 18.06"
-target "https://ocw.mit.edu/courses/mathematics/18-06sc-linear-algebra-fall-2011/index.htm"
-literal "false"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Multivariable calculus 
-\begin_inset CommandInset href
-LatexCommand href
-name "MIT 18.02"
-target "https://ocw.mit.edu/courses/mathematics/18-02sc-multivariable-calculus-fall-2010/"
-literal "false"
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
 \begin_layout Standard
-\begin_inset Separator plain
+\begin_inset CommandInset include
+LatexCommand include
+filename "Resources.lyx"
+
 \end_inset
 
 
@@ -541,7 +174,7 @@ status open
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "/Users/katharine/Teaching/Notes/MathMethods/Vectors/Vectors.lyx"
+filename "../Vectors/Vectors.lyx"
 
 \end_inset
 

@@ -6,12 +6,13 @@
 \origin unavailable
 \textclass extbook
 \begin_preamble
-\input{../Main/LyxNotesPreamble.tex}
+\input{klmacros}
+\notesheader
+\setcounter{chapter}{1}
 \end_preamble
 \use_default_options true
 \begin_modules
-theorems-ams
-theorems-ams-extended
+KL-theorems
 \end_modules
 \maintain_unincluded_children false
 \language english
@@ -36,7 +37,7 @@ theorems-ams-extended
 \bibtex_command default
 \index_command default
 \float_placement h
-\paperfontsize 12
+\paperfontsize 11
 \spacing single
 \use_hyperref true
 \pdf_bookmarks true
@@ -49,17 +50,17 @@ theorems-ams-extended
 \pdf_backref false
 \pdf_pdfusetitle true
 \papersize default
-\use_geometry true
-\use_package amsmath 1
-\use_package amssymb 1
+\use_geometry false
+\use_package amsmath 2
+\use_package amssymb 2
 \use_package cancel 1
 \use_package esint 1
-\use_package mathdots 1
-\use_package mathtools 1
-\use_package mhchem 1
-\use_package stackrel 1
-\use_package stmaryrd 1
-\use_package undertilde 1
+\use_package mathdots 0
+\use_package mathtools 0
+\use_package mhchem 0
+\use_package stackrel 0
+\use_package stmaryrd 0
+\use_package undertilde 0
 \cite_engine basic
 \cite_engine_type default
 \biblio_style siam
@@ -79,21 +80,17 @@ theorems-ams-extended
 \shortcut idx
 \color #008000
 \end_index
-\leftmargin 0.9in
-\topmargin 0.75in
-\rightmargin 0.9in
-\bottommargin 0.75in
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation skip
-\defskip medskip
+\defskip smallskip
 \is_math_indent 0
 \math_numbering_side default
 \quotes_style english
 \dynamic_quotes 0
 \papercolumns 1
 \papersides 1
-\paperpagestyle fancy
+\paperpagestyle default
 \tracking_changes false
 \output_changes false
 \html_math_output 0
@@ -267,6 +264,25 @@ in 3D.
 \end_inset
 
 .
+ This potentially confusing case 
+\emph on
+will 
+\emph default
+happen
+\emph on
+, 
+\emph default
+since it's common notation to use 
+\begin_inset Formula $r$
+\end_inset
+
+ for the magnitude of a position vector 
+\begin_inset Formula $\mathbf{r}$
+\end_inset
+
+; I've had students get themselves lost on exam problems through this.
+ So mark your vectors somehow.
+ 
 \end_layout
 
 \begin_layout Itemize
@@ -958,87 +974,443 @@ Gravitational force acting on a block on an inclined plane.
 
 \end_layout
 
-\begin_layout Subsubsection
-A less familiar application: polarized light
-\end_layout
+\begin_layout BoxedExample
+\begin_inset CommandInset label
+LatexCommand label
+name "A-small-bird"
 
-\begin_layout Standard
-In an electromagnetics course you'll learn that light is a wave in an EM
- field.
- Plane EM waves are transverse: if a plane wave is traveling in the 
+\end_inset
+
+A small bird of mass 
+\begin_inset Formula $m$
+\end_inset
+
+ is perched on a cable (see figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:bird-cable"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+) whose height is 
+\begin_inset Formula $h\left(x\right)=h_{0}\left(x/a\right)^{2}$
+\end_inset
+
+; assume the bird's mass is small enough that it doesn't change the shape
+ of the cable.
+ If the bird is at position 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+, find 
+\begin_inset Formula $F_{\tau}$
+\end_inset
+
+ , the component of the force tangent to the cable, and 
+\begin_inset Formula $F_{n}$
+\end_inset
+
+, the component of the force normal to the cable.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+At 
 \begin_inset Formula $x$
 \end_inset
 
-direction (along 
-\begin_inset Formula $\mathbf{\ihat}$
+, the slope of the cable is 
+\begin_inset Formula $h'\left(x\right)=2h_{0}x/a^{2}$
 \end_inset
 
-) then 
-\begin_inset Formula $\mathbf{E}\perp\ihat$
+.
+ Then 
+\begin_inset Formula $\tan\alpha=2h_{0}x/a^{2}$
+\end_inset
+
+, so we can find the cosine and sine of 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ as
+\begin_inset Formula 
+\[
+\cos\alpha=\frac{1}{\sqrt{1+\tan^{2}\alpha}}=\frac{a^{2}}{\sqrt{a^{4}+4h_{0}^{2}x^{2}}}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\sin\alpha=\frac{\tan\alpha}{\sqrt{1+\tan^{2}\alpha}}=\frac{2h_{0}x}{\sqrt{a^{4}+4h_{0}^{2}x^{2}}}.
+\]
+
+\end_inset
+
+The unit vectors 
+\begin_inset Formula $\tauhat$
+\end_inset
+
+and 
+\begin_inset Formula $\nhat$
+\end_inset
+
+ are then 
+\begin_inset Formula 
+\[
+\tauhat=\ihat\cos\alpha+\jhat\sin\alpha
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\nhat=-\ihat\sin\alpha+\jhat\cos\alpha.
+\]
+
+\end_inset
+
+With 
+\begin_inset Formula $\mathbf{F}=-mg\jhat$
+\end_inset
+
+, we find the components along 
+\begin_inset Formula $\tauhat$
 \end_inset
 
  and 
-\begin_inset Formula $\mathbf{B}\perp\ihat$
+\begin_inset Formula $\nhat$
 \end_inset
 
- , which we can express using the dot product: 
-\begin_inset Formula $\mathbf{E}\cdot\mathbf{\ihat=}0$
+ by taking dot products: 
+\begin_inset Formula 
+\[
+F_{\tau}=\tauhat\cdot\mathbf{F}=-\frac{2mgh_{0}x}{\sqrt{a^{4}+4h_{0}^{2}x^{2}}}
+\]
+
 \end_inset
 
- and 
-\begin_inset Formula $\mathbf{B}\cdot\ihat=0$
+
+\begin_inset Formula 
+\[
+F_{n}=\nhat\cdot\mathbf{F}=\frac{mga^{2}}{\sqrt{a^{4}+4h_{0}^{2}x^{2}}}.
+\]
+
 \end_inset
 
-.
- It can also be shown that in a plane wave 
-\begin_inset Formula $\mathbf{E}\perp\mathbf{B}$
-\end_inset
 
-.
- In the rest of this discussion we'll focus on the electric field and ignore
- the magnetic field.
- The polarization state of a wave is the direction of the electric field
- 
-\begin_inset Formula $\mathbf{E}$
-\end_inset
-
-.
- A typical light source (an LED bulb, a star, etc) emits light that is unpolariz
-ed: a superposition of different polarization states.
- 
 \end_layout
 
 \begin_layout Standard
-Although most (not all!) emitters produce unpolarized light, it is possible
- to obtain polarized light.
- Materials called polarizers transmit only light with a specific polarization
- state, absorbing all else.
- Unpolarized light entering a polarizer emerges polarized.
- Other processes can select for certain polarizations; these include scattering
- and reflection.
- We'll focus on polarizing materials, and consider a polarizer to be a 
-\begin_inset Quotes eld
+\begin_inset Separator plain
 \end_inset
 
-black box
-\begin_inset Quotes erd
-\end_inset
 
- that selects a particular polarization.
- 
 \end_layout
 
 \begin_layout Standard
-For a mathematical model of the action of a polarizer, we need two vectors:
- 
-\begin_inset Formula $\mathbf{E}$
+\begin_inset Separator plain
 \end_inset
 
- and 
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename BirdOnAWire.pdf
+	lyxscale 40
+	width 60col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:bird-cable"
+
+\end_inset
+
+Force components on a bird sitting on a curved cable.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset CommandInset label
+LatexCommand label
+name "subsec:Line-of-sight"
+
+\end_inset
+
+Line of sight to a particle
+\end_layout
+
+\begin_layout Standard
+Suppose a particle at position 
+\begin_inset Formula $\mathbf{r}\left(t\right)$
+\end_inset
+
+ is being observed by someone at 
+\begin_inset Formula $\mathbf{r}_{\text{obs}}\left(t\right)$
+\end_inset
+
+.
+ The vector from observer to position is 
+\begin_inset Formula $\mathbf{p}\left(t\right)=\mathbf{r}\left(t\right)-\mathbf{r}_{\text{obs}}\left(t\right)$
+\end_inset
+
+, and the unit vector in that direction is 
+\begin_inset Formula $\phat\left(t\right)=\mathbf{p}\left(t\right)/\sqrt{\mathbf{p}\left(t\right)\cdot\mathbf{p}\left(t\right)}$
+\end_inset
+
+.
+ The angle 
+\begin_inset Formula $\alpha\left(t\right)$
+\end_inset
+
+ between the line of sight vector 
+\begin_inset Formula $\phat\left(t\right)$
+\end_inset
+
+ and some unit vector 
+\begin_inset Formula $\ehat\left(t\right)$
+\end_inset
+
+ is given by 
+\begin_inset Formula $\cos\alpha\left(t\right)=\ehat\cdot\phat\left(t\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout BoxedExample
+A ball dropped at rest from 
+\begin_inset Formula $\mathbf{r}_{0}=h_{0}\jhat$
+\end_inset
+
+ is watched by an observer at 
+\begin_inset Formula $\mathbf{r}_{\text{obs}}=-a\ihat$
+\end_inset
+
+.
+ What is the angle between the ball and the horizontal as seen by the observer?
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+At time 
+\begin_inset Formula $t$
+\end_inset
+
+ the ball is at position 
+\begin_inset Formula $\mathbf{r}\left(t\right)=\left(h_{0}-\frac{1}{2}gt^{2}\right)\jhat$
+\end_inset
+
+; the vector from the observer is 
+\begin_inset Formula $\mathbf{p}\left(t\right)=\left(h_{0}-\frac{1}{2}gt^{2}\right)\jhat+a\ihat$
+\end_inset
+
+.
+ The unit vector along the line of sight (LOS) is
+\begin_inset Formula 
+\[
+\phat\left(t\right)=\frac{\mathbf{p}\left(t\right)}{\sqrt{\mathbf{p}\left(t\right)\cdot\mathbf{p}\left(t\right)}}=\frac{a\ihat+\left(h_{0}-\frac{1}{2}gt^{2}\right)\jhat}{\sqrt{a^{2}+\left(h_{0}-\frac{1}{2}gt^{2}\right)^{2}}}.
+\]
+
+\end_inset
+
+Then the angle between 
 \begin_inset Formula $\phat$
 \end_inset
 
+ and 
+\begin_inset Formula $\ihat$
+\end_inset
+
+ is given by
+\begin_inset Formula 
+\[
+\cos\alpha\left(t\right)=\ihat\cdot\phat\left(t\right)=\frac{a}{\sqrt{a^{2}+\left(h_{0}-\frac{1}{2}gt^{2}\right)^{2}}}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+LOS velocity
+\end_layout
+
+\begin_layout Standard
+Suppose the observer from 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "subsec:Line-of-sight"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ has a police radar gun.
+ This device uses the Doppler effect to measure the component of the velocity
+ away from or towards the observer; that is, the component of the velocity
+ along the LOS vector 
+\begin_inset Formula $\phat\left(t\right)$
+\end_inset
+
 .
+ We know how to find this component: dot the LOS unit vector 
+\begin_inset Formula $\phat$
+\end_inset
+
+ into the velocity, 
+\begin_inset Formula 
+\[
+v_{\text{LOS}}=\phat\left(t\right)\cdot\mathbf{v}\left(t\right).
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus far we've assumed the observer's position is fixed.
+ If the observer moves, then the relative position is 
+\begin_inset Formula $\mathbf{p}\left(t\right)=\mathbf{r}\left(t\right)-\mathbf{r}_{\text{obs}}\left(t\right)$
+\end_inset
+
+ and the relative velocity is 
+\begin_inset Formula $\mathbf{v}_{\text{rel}}\left(t\right)=\mathbf{v}\left(t\right)-\mathbf{v}_{\text{obs}}\left(t\right)$
+\end_inset
+
+.
+ The LOS velocity is then
+\begin_inset Formula 
+\begin{equation}
+v_{\text{LOS}}=\frac{\mathbf{r}\left(t\right)-\mathbf{r}_{\text{obs}}\left(t\right)}{\left\Vert \mathbf{r}\left(r\right)-\mathbf{r}_{\text{obs}}\left(t\right)\right\Vert }\cdot\od{}{t}\left(\mathbf{r}\left(t\right)-\mathbf{r}_{\text{obs}}\left(t\right)\right).\label{eq:LOS-vel}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Equation 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:LOS-vel"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ was derived by projecting the relative velocity onto the LOS unit vector.
+ Show that 
+\begin_inset Formula $v_{\text{LOS}}$
+\end_inset
+
+ is also equal to the time rate of change of observer-particle distance,
+\begin_inset Formula 
+\[
+v_{\text{LOS}}=\od{}{t}\left\Vert \mathbf{r}\left(t\right)-\mathbf{r}_{\text{obs}}\left(t\right)\right\Vert .
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename Spiral.pdf
+	lyxscale 40
+	width 60col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Schematic of line of sight (LOS) velocity as seen from a stationary observer.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -1147,31 +1519,44 @@ Consequences:
 
 \begin_deeper
 \begin_layout Enumerate
+Anticommutivity: 
 \begin_inset Formula $\mathbf{a}\times\mathbf{b}=-\mathbf{b}\times\mathbf{a}$
 \end_inset
 
-
+.
+ The directed area of a parallelogram changes sign when the order of the
+ defining vectors is reversed.
+ Alternatively, the direction of the thumb in the right-hand rule is reversed
+ when the order of the vectors is reversed.
+ 
 \end_layout
 
 \begin_layout Enumerate
 \begin_inset Formula $\mathbf{a}\times\mathbf{a}=\mathbf{0}$
 \end_inset
 
-
+: The degenerate parallelogram formed by a vector and itself has zero area.
+ 
 \end_layout
 
 \begin_layout Enumerate
 \begin_inset Formula $\mathbf{a}\cdot\left(\mathbf{a}\times\mathbf{b}\right)=0$
 \end_inset
 
+ and 
+\begin_inset Formula $\mathbf{b}\cdot\left(\mathbf{a}\times\mathbf{b}\right)=0$
+\end_inset
 
+: The directed of a parallelogram area is orthogonal to both vectors that
+ define the parallelogram.
 \end_layout
 
 \begin_layout Enumerate
 \begin_inset Formula $\left\Vert \mathbf{a}\times\mathbf{b}\right\Vert =\left\Vert \mathbf{a}\right\Vert \left\Vert \mathbf{b}\right\Vert \left|\sin\theta_{ab}\right|$
 \end_inset
 
-
+: This follows from a geometric construction using the angle addition formula.
+ 
 \end_layout
 
 \end_deeper
@@ -1186,6 +1571,14 @@ b_{x} & b_{y} & b_{z}
 \end{array}\right|=\left(a_{y}b_{z}-a_{z}b_{y}\right)\ihat-\left(a_{x}b_{z}-a_{z}b_{x}\right)\jhat+\left(a_{x}b_{y}-a_{y}b_{x}\right)\khat.
 \]
 
+\end_inset
+
+Properties 1-3 in the previous bullet are easily derived from this formula.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
 \end_inset
 
 
