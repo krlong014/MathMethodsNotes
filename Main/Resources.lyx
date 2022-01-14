@@ -304,6 +304,12 @@ https://www.feynmanlectures.caltech.edu/
 Math reference handbook
 \end_layout
 
+\begin_layout Standard
+Nobody can remember everything, so make yourself familiar with a good repository
+ of mathematical knowledge.
+ 
+\end_layout
+
 \begin_layout Itemize
 (DLMF) Olver (ed),
 \emph on
@@ -335,8 +341,9 @@ NIST Handbook of Mathematical Functions,
  
 \end_layout
 
+\end_deeper
 \begin_layout Itemize
-The original 
+The original NIST (then NBS) 
 \emph on
 Handbook of Mathematical Functions, 
 \emph default
@@ -346,7 +353,6 @@ edited by Abramowitz and Stegun, was published in 1964.
  
 \end_layout
 
-\end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -354,6 +360,109 @@ edited by Abramowitz and Stegun, was published in 1964.
 
 \end_layout
 
+\begin_layout Section
+Related books
+\end_layout
+
+\begin_layout Itemize
+Boyce and DiPrima, 
+\emph on
+Elementary Differential Equations and Boundary Value Problems
+\emph default
+ is the classic undergraduate text on differential equations.
+ You can probably find a used copy of an earlier edition at Amazon or other
+ used bookseller.
+ 
+\end_layout
+
+\begin_layout Itemize
+If you're looking for other books at about the level of this course, here
+ are a few:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Boas, 
+\emph on
+Mathematical Methods in the Physical Sciences
+\emph default
+ is another standard undergraduate Math Methods of Physics text
+\end_layout
+
+\begin_layout Itemize
+Arfken and Weber, 
+\emph on
+Mathematical Methods for Physicists
+\emph default
+ is at about the same mathematical level as this course, with lots of problems
+ and examples.
+ However, the discussion assumes you know physics at about the senior level.
+\end_layout
+
+\begin_layout Itemize
+Tang's three-volume series 
+\emph on
+Mathematical Methods for Engineers and Scientists
+\emph default
+ is good.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+If you really like this subject, more advanced books include:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Hassani, 
+\emph on
+Mathematical Physics
+\end_layout
+
+\begin_layout Itemize
+Cahill, 
+\emph on
+Physical Mathematics
+\end_layout
+
+\begin_layout Itemize
+Byron and Fuller, 
+\emph on
+Mathematics of Classical and Quantum Physics.
+ 
+\emph default
+This is available as a Dover reprint.
+ 
+\end_layout
+
+\begin_layout Itemize
+Morse and Feshbach, 
+\emph on
+Methods of Theoretical Physics.
+\end_layout
+
+\begin_layout Itemize
+Bamberg and Sternberg, 
+\emph on
+A Course in Mathematics for Students of Physics, 
+\emph default
+a two-volume set.
+ This isn't a 
+\begin_inset Quotes eld
+\end_inset
+
+math methods
+\begin_inset Quotes erd
+\end_inset
+
+ book; it covers fundamental mathematics (linear algebra, real analysis,
+ differential geometry, and algebraic topology) aimed at applications to
+ physics.
+ 
+\end_layout
+
+\end_deeper
 \begin_layout Section
 Online presentations
 \end_layout
