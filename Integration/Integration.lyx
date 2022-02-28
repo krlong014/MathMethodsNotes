@@ -109,15 +109,83 @@ Integration
 \end_layout
 
 \begin_layout Section
-Line, area, and volume elements
+Length, area, and volume elements in orthogonal curvilinear coordinates
+\end_layout
+
+\begin_layout Subsection
+Length elements
+\end_layout
+
+\begin_layout Standard
+Displace a particle from 
+\begin_inset Formula $\mathbf{r}\left(q_{1},q_{2},q_{3}\right)$
+\end_inset
+
+ to 
+\begin_inset Formula $\mathbf{r}\left(q_{1}+dq_{1},q_{2},q_{3}\right)$
+\end_inset
+
+, and it will have moved by
+\begin_inset Formula 
+\[
+d\mathbf{r}=\mathbf{r}\left(q_{1}+dq_{1},q_{2},q_{3}\right)-\mathbf{r}\left(q_{1},q_{2},q_{3}\right)\approx\pd{\mathbf{r}}{q_{1}}\,dq_{1}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+d\ell_{i}=h_{i}\,dq_{i}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+d\boldsymbol{{\ell}}_{i}=h_{i}\ehat_{i}\,dq_{i}.
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Area elements
+\end_layout
+
+\begin_layout Subsection
+Volume elements
 \end_layout
 
 \begin_layout Section
-Line integrals
+Example applications
 \end_layout
 
-\begin_layout Section
-Area, surface, and volume integrals
+\begin_layout Subsection
+Newton's shell theorem
+\end_layout
+
+\begin_layout Standard
+Newton proposed the inverse square law for the gravitational interaction
+ between point masses.
+  
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+d\mathbf{g}=
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -134,14 +202,18 @@ The integral
 \end_inset
 
  appears frequently in applications, especially in statistical physics and
- quantum physics.
+ quantum mechanics.
  The indefinite integral can't be evaluated by any standard methods; Liouville
  proved that the function 
 \begin_inset Formula $e^{-x^{2}}$
 \end_inset
 
- has no closed-form antiderivative.
- No clever substitution will get you there.
+ has no closed-form antiderivative: no clever trick will get you to a formula
+ for 
+\begin_inset Formula $\int e^{-x^{2}}\,dx$
+\end_inset
+
+.
  However, the 
 \emph on
 definite
@@ -327,49 +399,6 @@ Use completion of the square to evaluate
 
 \end_layout
 
-\begin_layout Problem
-In a system in thermodynamic equilibrium at temperature 
-\begin_inset Formula $T$
-\end_inset
-
-, the probability of finding a particle with energy in the interval 
-\begin_inset Formula $\left(E,E+dE\right)$
-\end_inset
-
- is 
-\begin_inset Formula $p\left(E\right)dE=Ce^{-\beta E}g\left(E\right)\,dE$
-\end_inset
-
-, where 
-\begin_inset Formula $\beta=1/k_{B}T$
-\end_inset
-
-, 
-\begin_inset Formula $g\left(E\right)dE$
-\end_inset
-
- is proportional the number of possible states having energy in the range
- 
-\begin_inset Formula $\left(E,E+dE\right)$
-\end_inset
-
-, and 
-\begin_inset Formula $C$
-\end_inset
-
- is a normalization constant.
- The normalization constant will be fixed by the condition 
-\begin_inset Formula 
-\[
-\int p\left(E\right)\,dE=1.
-\]
-
-\end_inset
-
-.
- 
-\end_layout
-
 \begin_layout Subsubsection
 Multidimensional Gaussian integrals
 \end_layout
@@ -387,7 +416,7 @@ f\left(\mathbf{r}\right)=e^{-\alpha\left\Vert \mathbf{r}\right\Vert ^{2}}=e^{-\a
 
 \end_inset
 
-can be evaluated in any number of dimensions.
+can be defined in any number of dimensions.
  Let's work in 
 \begin_inset Formula $\RR^{n}$
 \end_inset
@@ -428,7 +457,17 @@ f\left(\mathbf{r}\right)=e^{-\alpha_{1}x_{1}^{2}}e^{-\alpha_{2}x_{2}^{2}}\cdots 
 
 \end_inset
 
-Use the reasoning above to show that 
+From the result of problem 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "prob:ScaledGaussianIntegral"
+plural "false"
+caps "false"
+noprefix "false"
+
+\end_inset
+
+ we see that 
 \begin_inset Formula 
 \[
 \int_{\RR^{n}}f\left(\mathbf{r}\right)d^{n}\mathbf{r}=\frac{\pi^{n/2}}{\sqrt{\alpha_{1}\alpha_{2}\cdots\alpha_{n}}}.
